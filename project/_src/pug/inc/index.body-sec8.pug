@@ -1,0 +1,84 @@
+-var dataTable = [];
+-var dataTable2 = [];
+-dataTable.push(['China', '21,269']);
+-dataTable.push(['United States', '18,562']);
+-dataTable.push(['India', '8,721']);
+-dataTable.push(['Japan', '4,932']);
+-dataTable.push(['Germany', '3,979']);
+-dataTable.push(['Russia', '3,745']);
+-dataTable.push(['Brazil', '3,135']);
+-dataTable.push(['Indonesia', '3,135']);
+-dataTable.push(['United Kingdom', '2,788']);
+-dataTable.push(['France', '2,307']);
+-dataTable.push(['Mexico', '2307']);
+-dataTable.push(['Italy', '2,221']);
+-dataTable.push(['South Korea', '1,929']);
+-dataTable.push(['Turkey', '1,906']);
+-dataTable.push(['Saudi Arabia', '1,731']);
+
+-dataTable2.push(['China', '58,499']);
+-dataTable2.push(['India', '44,128']);
+-dataTable2.push(['United States', '34,102']);
+-dataTable2.push(['Indonesia', '10,502']);
+-dataTable2.push(['Brazil', '7,540']);
+-dataTable2.push(['Russia', '7,131']);
+-dataTable2.push(['Mexico', '6,863']);
+-dataTable2.push(['Japan', '6,779']);
+-dataTable2.push(['Germany', '6,138']);
+-dataTable2.push(['United Kingdom', '5,368']);
+-dataTable2.push(['Turkey', '5,184']);
+-dataTable2.push(['France', '4,705']);
+-dataTable2.push(['Saudi Arabia', '4,694']);
+-dataTable2.push(['Nigeria', '4,348']);
+-dataTable2.push(['Egypt', '4,333']);
+
+section.sec#section-8
+    div.row.no-mx
+        div.col-12
+            div.d-block.mx-auto.xcol-11
+                p.fz44.text-bold.text-gray Mexico will be the world's 7th largest economy in 2050
+                br
+                br
+                br
+                
+        div.col-sm-12.col-md-6
+            div.d-block.mx-auto.xcol-11
+                div.row.tableAX
+                    div.col-2.year-box
+                        span.fz100.text-silver 2016
+                        
+                    div.col-10
+                        table.table.text-gray.text-center.fz20
+                            tr
+                                th: b Position
+                                th: b Country
+                                th: b CDP at PPA
+                            each val, inx in dataTable
+                                tr
+                                    td= inx + 1
+                                    td= val[0]
+                                    td= val[1]
+                    
+        div.col-sm-12.col-md-6
+             div.d-block.mx-auto.xcol-11
+                div.row.tableAX
+                    div.col-2.year-box
+                        span.fz100.text-silver 2050
+                        
+                    div.col-10
+                        table.table.text-gray.text-center.fz20
+                            tr
+                                th: b Position
+                                th: b Country
+                                th: b CDP at PPA
+                            each val, inx in dataTable2
+                                tr
+                                    td= inx + 1
+                                    td= val[0]
+                                    td= val[1]
+                                    
+        div.col-12
+            br
+            br
+            br
+            div.d-block.mx-auto.xcol-11: hr.set1

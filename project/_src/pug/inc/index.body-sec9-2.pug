@@ -1,0 +1,85 @@
+-var dataGraph = [];
+-dataGraph.push(['Angola', '1%', false]);
+-dataGraph.push(['Spain', '1%', false]);
+-dataGraph.push(['Sweden', '1%', false]);
+-dataGraph.push(['Ireland', '2%', false]);
+-dataGraph.push(['Mexico', '2%', true, 'Top countries receiving foreign<br>direct investment, 2016']);
+-dataGraph.push(['Luxemburg', '3%', false]);
+-dataGraph.push(['France', '5%', false]);
+-dataGraph.push(['Italy', '5%', false]);
+-dataGraph.push(['Belgium', '5%', false]);
+-dataGraph.push(['Canada', '6%', false]);
+-dataGraph.push(['Russia', '6%', false]);
+-dataGraph.push(['India', '8%', false]);
+-dataGraph.push(['Cayman Islands', '9%', false]);
+-dataGraph.push(['Australia', '10%', false]);
+-dataGraph.push(['Brazil', '11%', false]);
+-dataGraph.push(['British Virgin Islands', '11%', false]);
+-dataGraph.push(['Singapore', '11%', false]);
+-dataGraph.push(['Netherlands', '13%', false]);
+-dataGraph.push(['Hong Kong', '15%', false]);
+-dataGraph.push(['China', '17%', false]);
+-dataGraph.push(['United Kingdom', '20%', false]);
+-dataGraph.push(['United States', '25%', false]);
+-dataGraph.push(['Worldwide total', '75%', false]);
+
+div.col-12
+    br
+    br
+    p.text-right.text-uppercase
+        span.fz40 Among the
+        span.text-medium.fz32 &nbsp;most attractive
+        br
+        span.text-medium.fz32 worldwide destination
+        br
+        span.text-medium.fz32 for investment
+        
+div.col-8.graphx
+    each item in dataGraph
+        if item[2]
+            div.graph-row.act
+                div.desc: b=item[0]
+                div.bar(style=`width:${item[1]}`)
+                div.info
+                    span: span.the-dot.blue
+                    span.fz28!=item[3]
+        else
+            div.graph-row
+                div.desc=item[0]
+                div.bar(style=`width:${item[1]}`)
+             
+    div.d-block(style="padding-top:20%")
+    
+// -> Graph 2
+-var dataGraph2 = [];
+-dataGraph2.push(['United Arab Emirates', '5%', false]);
+-dataGraph2.push(['South Korea', '5%', false]);
+-dataGraph2.push(['Mexico', '5%', true, 'Most attrative destinations for<br>foregin direct investment, 2018']);
+-dataGraph2.push(['Hong Kong', '7%', false]);
+-dataGraph2.push(['Australia', '7%', false]);
+-dataGraph2.push(['Russia', '7%', false]);
+-dataGraph2.push(['Canada', '10%', false]);
+-dataGraph2.push(['Brazil', '11%', false]);
+-dataGraph2.push(['France', '11%', false]);
+-dataGraph2.push(['Japan', '13%', false]);
+-dataGraph2.push(['India', '15%', false]);
+-dataGraph2.push(['United Kingdom', '22%', false]);
+-dataGraph2.push(['Germany', '28%', false]);
+-dataGraph2.push(['China', '35%', false]);
+-dataGraph2.push(['United States', '75%', false]);
+
+div.col-8.graphx.xcol-8
+    each item in dataGraph2
+        if item[2]
+            div.graph-row.act
+                div.desc: b=item[0]
+                div.bar(style=`width:${item[1]}`)
+                div.info
+                    span: span.the-dot.blue
+                    span.fz28!=item[3]
+        else
+            div.graph-row
+                div.desc=item[0]
+                div.bar(style=`width:${item[1]}`)
+    
+div.d-block(style="padding:10% 0"): hr.set1
