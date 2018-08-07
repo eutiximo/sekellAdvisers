@@ -7,6 +7,8 @@ html, body {
     overflow-x: hidden;
 }
 
+.resp-mobile { display: none !important; }
+
 .main-site {
     display: block;
     width: 100%;
@@ -96,8 +98,10 @@ html, body {
 
 @import "inc/section-1.scss";
 @import "inc/section-2.scss";
-@import "inc/section-3.scss";
 @import "inc/section-4.scss";
 @import "inc/section-5.scss";
 @import "inc/section-8.scss";
 @import "inc/section-9.scss";
+
+@include section1("desktop");
+@include section2("desktop");

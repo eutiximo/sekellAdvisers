@@ -5,6 +5,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.resp-mobile {
+  display: none !important;
+}
+
 .main-site {
   display: block;
   width: 100%;
@@ -103,153 +107,6 @@ html, body {
   position: relative;
 }
 
-#section-1 {
-  background-color: #141414;
-}
-
-#section-1 > .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#section-1 #particles-1 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#section-1 .logo {
-  display: block;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-#section-1 .social-box {
-  display: block;
-  width: 235px;
-  height: auto;
-  position: absolute;
-  top: 30px;
-  left: calc(100% - 30px);
-  -webkit-transform: translate(-100%, 0%);
-          transform: translate(-100%, 0%);
-  color: white;
-}
-
-#section-1 .social-box > * {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#section-1 .social-box .icn {
-  width: 50px;
-  height: 50px;
-  font-size: 2.5em;
-  position: relative;
-  border-radius: 50%;
-  color: #141414;
-  background-color: white;
-}
-
-#section-1 .social-box .icn i {
-  position: absolute;
-  top: calc(50% - 3px);
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#section-1 .social-box .middle-line {
-  width: 0px;
-  height: 60px;
-  margin: 0 20px;
-  border: 1px solid white;
-}
-
-#section-1 .foo-item {
-  max-width: 500px;
-  position: absolute;
-  top: calc(100% - 30px);
-  left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
-  color: white;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-
-#section-1 .foo-item > * {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#section-1 .foo-item > div:nth-of-type(1) {
-  width: 30%;
-  position: relative;
-}
-
-#section-1 .foo-item > div:nth-of-type(1):before {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 100px;
-  border: 1px solid white;
-  position: absolute;
-  left: calc(100% - 10px);
-  top: 0px;
-  -webkit-transform: translate(0, -20%);
-          transform: translate(0, -20%);
-}
-
-#section-1 .foo-item > div:nth-of-type(2) {
-  width: 60px;
-  height: 60px;
-  margin: 0 10px;
-  position: relative;
-  border-radius: 50%;
-  background: white;
-  color: #141414;
-}
-
-#section-1 .foo-item > div:nth-of-type(2) > i {
-  position: absolute;
-  top: calc(50% - 1px);
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-}
-
-#section-1 .foo-item > div:nth-of-type(3) {
-  width: 50%;
-}
-
-#section-2 #particles-2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#section-2 .img-tower {
-  display: block;
-  width: 50%;
-}
-
-#section-3 .img-socios {
-  display: block;
-  width: 65%;
-}
-
 #section-4 ul p {
   margin: 0 0 37px 0;
 }
@@ -284,7 +141,23 @@ html, body {
   position: absolute;
 }
 
-#section-9 .ball {
+#section-9 .box-balls {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#section-9 .box-balls .item {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  margin: 0 10px 120px 10px;
+  position: relative;
+}
+
+#section-9 .box-balls .item:before {
+  content: "";
   display: block;
   width: 50px;
   height: 50px;
@@ -292,26 +165,27 @@ html, body {
   background-color: gray;
 }
 
-#section-9 .ball.x2 {
+#section-9 .box-balls .item.x2:before {
   width: 100px;
   height: 100px;
 }
 
-#section-9 .ball + span {
-  display: block;
-  width: 100%;
-  max-width: 200px;
+#section-9 .box-balls .item span {
   position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -120%);
-          transform: translate(-50%, -120%);
 }
 
-#section-9 .ball + span.bottom {
+#section-9 .box-balls .item span.top {
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+#section-9 .box-balls .item span.bottom {
   top: 100%;
-  -webkit-transform: translate(-50%, 20%);
-          transform: translate(-50%, 20%);
+  left: 50%;
+  -webkit-transform: translate(-50%, 5px);
+          transform: translate(-50%, 5px);
 }
 
 #section-9 .graphx {
@@ -388,4 +262,112 @@ html, body {
 
 #section-9 .sec9-3 .the-dot {
   margin: 0 40px;
+}
+
+#section-1 {
+  background-color: #141414;
+}
+
+#section-1 > .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#section-1 #particles-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#section-1 .logo {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#section-1 .social-box {
+  display: block;
+  width: 180px;
+  height: auto;
+  position: absolute;
+  top: 30px;
+  left: calc(100% - 30px);
+  -webkit-transform: translate(-100%, 0%);
+          transform: translate(-100%, 0%);
+  color: white;
+}
+
+#section-1 .social-box img {
+  display: block;
+  width: 100%;
+  max-width: 40px;
+}
+
+#section-1 .social-box > div > div:nth-of-type(1) {
+  position: relative;
+}
+
+#section-1 .social-box > div > div:nth-of-type(1):before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 7px);
+  border-left: 1px solid white;
+}
+
+#section-1 .foo-item {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: calc(100% - 30px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+#section-1 .foo-item img {
+  display: block;
+  width: 60px;
+  margin: 0 0 0 10px;
+}
+
+#section-1 .foo-item > div > div:nth-of-type(2) {
+  padding: 0 10px;
+}
+
+#section-1 .foo-item > div > div:nth-of-type(1) {
+  position: relative;
+}
+
+#section-1 .foo-item > div > div:nth-of-type(1):before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: calc(100% + 10px);
+  border: 1px solid white;
+  position: absolute;
+  top: -5px;
+  left: calc(100% + 10px);
+}
+
+#section-2 #particles-2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

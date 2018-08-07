@@ -6,13 +6,6 @@
 /*=include ../../../node_modules/bootstrap/dist/css/bootstrap.min.css*/
 
 /* Tamaños de textos */
-@for $i from 3 through 25 {
-    .fz#{($i * 4)} {
-        font-size: toRem($i * 4);
-        line-height: toRem($i * 5);
-    }
-}
-
 .h1, h1.title{
     font-size: toRem(48);
 }
@@ -28,6 +21,15 @@
 }
 .h5, h5.title{
     font-size: toRem(18);
+}
+
+@media (min-width:993px) {
+    @for $i from 3 through 25 {
+        .fz#{($i * 4)} {
+            font-size: toRem($i * 4);
+            line-height: toRem($i * 5);
+        }
+    }
 }
 
 /* Colores texto */
@@ -61,6 +63,10 @@ $array: (
     (12, 100%)
 );
 
+@each $item in $array {
+    .xcol-#{nth($item, 1)} { width: nth($item, 2) }
+}
+
 @media (min-width: 576px) {
     @each $item in $array {
         .xcol-sm-#{nth($item, 1)} { width: nth($item, 2) }
@@ -80,9 +86,6 @@ $array: (
     @each $item in $array {
         .xcol-xl-#{nth($item, 1)} { width: nth($item, 2) }
     }
-}
-@each $item in $array {
-    .xcol-#{nth($item, 1)} { width: nth($item, 2) }
 }
 
 /* set row & cols */

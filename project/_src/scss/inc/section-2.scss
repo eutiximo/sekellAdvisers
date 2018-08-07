@@ -1,16 +1,18 @@
-#section-2 {
-    
-    #particles-2 {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+@mixin section2($mod) {
+    @if $mod == "desktop" {
+        #section-2 {
+            #particles-2 {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
     }
     
-    .img-tower {
-        display: block;
-        width: 50%;
+    @if $mod == "mobile" {
+        
     }
 }
