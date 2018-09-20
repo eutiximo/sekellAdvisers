@@ -1,28 +1,52 @@
 -var currentPage = 'Home';
--var titleText = 'Sekell Advisers | Inicio'
+-var titleText = 'Sekell Advisers | Home';
 
 doctype html
 html
     head
-        include inc/index.head.pug
+        include inc2/index.head.pug
+        
     body
         main.main-site
-            include inc/index.body-sec1.pug
-            
-            include inc/index.body-sec2.pug
-            
-            include inc/index.body-sec3.pug
-            
-            include inc/index.body-sec4.pug
-            
-            include inc/index.body-sec5.pug
-            
-            include inc/index.body-sec6.pug
-            
-            include inc/index.body-sec7.pug
-            
-            include inc/index.body-sec8.pug
-            
-            include inc/index.body-sec9.pug
-            
-        include inc/index.scripts.pug
+            section.sec#sec1(suit)
+                div.content
+                    a.linkein.d-flex.justify-content-around.align-items-center(href="#" target="_blank")
+                        div.w-2: img(src="media/assets/linkein-orb.svg").img-fluid.d-block.mx-auto
+                        div Sekell Advisers
+                        
+                    div.sekell-logo
+                        img(src="media/assets/logo-white.svg").img-fluid
+                        
+                    div.foo-address.d-flex.justify-content-center.align-items-center.text-uppercase.w-10.w-lg-3.fz12
+                        div Business<br>strategy
+                        div: img(src="media/assets/map-marker.svg")
+                        div Varsivia 36 Colonia<br>Juarez. Mexico City
+                        
+            section.sec#sec2
+                div.content.mx-x3
+                    div.row
+                        div.col-12.col-md-5.col-lg-6
+                            img(src="media/images/tower.png").w-11.w-sm-9.w-lg-7
+                            br
+                            
+                            include inc2/home/svg.text1.pug
+                            
+                            
+                        div.col-12.col-md-7.col-lg-6
+                            div.d-block.mx-auto.w-11.w-lg-9
+                                p.h3.text-center.text-uppercase Your first and <span class="tx700">best</span> link to the Mexican market.
+                                br
+                                br
+                                
+                                p.text-justify We can help you grow your business in Mexico, North America’s most dynamic emerging economy.
+                                
+                            hr.set1
+                            
+                            div.d-block.mx-auto.w-11.w-lg-9
+                                p.text-justify We support U.S. and Canadian companies’ market entry into Mexico with dedicated, on-the-ground experts. We’re your secret weapon to overcome obstacles and cultural barriers. We have the expertise and personal touch you need to penetrate and expand in the Mexican market.
+                                br
+                                br
+                                
+                                p.text-center As your single point of contact in Mexico, and we coordinate all details and services on your behalf.                    
+                        
+        script(src="scripts/main2.js")

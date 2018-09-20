@@ -10,8 +10,8 @@
         wh: $(window).height()
     };
     
-    //=include method.suit-section.js
-    //=include method.particles.js
+    //=include inc/method.suit-section.js
+    //=include inc/method.particles.js
     
     $(window).on('resize', function (event) {
         $g.ww = $(window).width();

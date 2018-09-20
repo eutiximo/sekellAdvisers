@@ -1,0 +1,107 @@
+@import "inc2/_vars.scss";
+
+html, body {
+    background: white;
+    font-family: $ff-montse;
+    font-size: $fz-site;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+*[resp="desktop"] { display: none !important; }
+
+.main-site {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+    .sec {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        position: relative;
+        padding: 30px 0;
+        color: $color-carbon;
+        
+        & > .content {
+            $mxset: 20;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 100px;
+            margin: ($mxset + 0px) auto;
+            
+            &.strech { max-width: $standar-width; }
+            &.mx-x2 { margin: ($mxset * 2 + 0px) auto;}
+            &.mx-x3 { margin: ($mxset * 3 + 0px) auto;}
+            &.mx-x4 { margin: ($mxset * 4 + 0px) auto;}
+            &.mx-x5 { margin: ($mxset * 5 + 0px) auto;}
+            &.mx-x6 { margin: ($mxset * 6 + 0px) auto;}
+        }
+    }
+}
+
+#sec1 {
+    background-color: $color-deepBlack;
+    
+    .linkein {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        left: 100%;
+        transform: translate(-110%, 0%);
+        color: white;
+        
+        & div:nth-of-type(1) { position: relative;}
+        & div:nth-of-type(1):before {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: calc(100% + 15px);
+            border-left: 1px solid white;
+        }
+    }
+    
+    .sekell-logo {
+        display: block;
+        width: 50%;
+        max-width: $standar-width;
+        @include centerElem();
+    }
+    
+    .foo-address {
+        color: white;
+        position: absolute;
+        top: calc(100% - 50px);
+        left: 50%;
+        transform: translate(-50%, -100%);
+        
+        & > div:nth-of-type(1) { position: relative; }
+        & > div:nth-of-type(1):after {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: calc(100% + 15px);
+            border-left: 1px solid white;
+        }
+        & > div:nth-of-type(2) {
+            margin: 0 10px 0 30px;
+            
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 40px;
+            }
+        }
+    }
+}

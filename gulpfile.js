@@ -48,7 +48,7 @@ gulp.task('pug:compile', function () {
  * Funcion para compilar el "main.js"
  */
 gulp.task('js:compile', function () {
-    var srcPath = projectPath + '_src/scripts/main.js',
+    var srcPath = projectPath + '_src/scripts/*.js',
         destPath = projectPath + 'scripts/';
     
     gulp.src(srcPath).pipe(include()).on('error', console.log)

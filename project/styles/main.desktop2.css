@@ -1,0 +1,136 @@
+html, body {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+*[resp="desktop"] {
+  display: none !important;
+}
+
+.main-site {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.main-site .sec {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  position: relative;
+  padding: 30px 0;
+  color: #4D4D4D;
+}
+
+.main-site .sec > .content {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  margin: 20px auto;
+}
+
+.main-site .sec > .content.strech {
+  max-width: 1028px;
+}
+
+.main-site .sec > .content.mx-x2 {
+  margin: 40px auto;
+}
+
+.main-site .sec > .content.mx-x3 {
+  margin: 60px auto;
+}
+
+.main-site .sec > .content.mx-x4 {
+  margin: 80px auto;
+}
+
+.main-site .sec > .content.mx-x5 {
+  margin: 100px auto;
+}
+
+.main-site .sec > .content.mx-x6 {
+  margin: 120px auto;
+}
+
+#sec1 {
+  background-color: #141414;
+}
+
+#sec1 .linkein {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  -webkit-transform: translate(-110%, 0%);
+          transform: translate(-110%, 0%);
+  color: white;
+}
+
+#sec1 .linkein div:nth-of-type(1) {
+  position: relative;
+}
+
+#sec1 .linkein div:nth-of-type(1):before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: calc(100% + 15px);
+  border-left: 1px solid white;
+}
+
+#sec1 .sekell-logo {
+  display: block;
+  width: 50%;
+  max-width: 1028px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#sec1 .foo-address {
+  color: white;
+  position: absolute;
+  top: calc(100% - 50px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+#sec1 .foo-address > div:nth-of-type(1) {
+  position: relative;
+}
+
+#sec1 .foo-address > div:nth-of-type(1):after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 15px);
+  border-left: 1px solid white;
+}
+
+#sec1 .foo-address > div:nth-of-type(2) {
+  margin: 0 10px 0 30px;
+}
+
+#sec1 .foo-address > div:nth-of-type(2) img {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+}

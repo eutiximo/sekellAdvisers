@@ -1,0 +1,41 @@
+@import "inc2/_vars.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Font settings */
+.h1, .fz45 {
+    font-size: toRem(45);
+    line-height: toRem(45);
+}
+.h2, .fz38 {
+    font-size: toRem(38);
+    line-height: toRem(38);
+}
+.h3, .fz32 {
+    font-size: toRem(32);
+    line-height: toRem(32);
+}
+.h4, .fz28 {
+    font-size: toRem(28);
+    line-height: toRem(28);
+}
+.h5, .fz18 {
+    font-size: toRem(18);
+    line-height: toRem(18);
+}
+.h6, .fz12 {
+    font-size: toRem(12);
+    line-height: toRem(12);
+}
+
+.tx300, .text-thin { font-weight: 300; }
+.tx400, .text-light-extra { font-weight: 400; }
+.tx500, .text-light { font-weight: 500; }
+.tx600, .text-medium { font-weight: 600; }
+.tx700, .text-bold-semi { font-weight: 700; }
+.tx800, .text-bold { font-weight: 800; }
+.tx900, .text-bold-extra { font-weight: 900; }
+
+/* Width cols */
+@include contentsWidths();
