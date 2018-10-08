@@ -1,0 +1,57 @@
+-
+    var dataTable1 = [
+        {country: "China", cdp: "21,269"},
+        {country: "United States", cdp: "18,562"},
+        {country: "India", cdp: "8,721"},
+        {country: "Japan", cdp: "4,932"},
+        {country: "Germary", cdp: "3,979"},
+        {country: "Russia", cdp: "3,745"},
+        {country: "Brazil", cdp: "3,135"},
+        {country: "Indonesia", cdp: "3,135"},
+        {country: "United Kingdom", cdp: "2,788"},
+        {country: "France", cdp: "2,307"},
+        {country: "Mexico", cdp: "2,307", higthlight: true},
+        {country: "Italy", cdp: "2,307"},
+        {country: "South Korea", cdp: "1,929"},
+        {country: "Turkey", cdp: "1,906"},
+        {country: "Saudi Arabia", cdp: "1,731"}
+    ];
+    
+section.sec#sec6.vline
+    div.row
+        div.col-12.col-md-6
+            div.d-block.w-11.w-md-5.mx-auto.text-center(fit-fz)
+                div.fw300(data-reduce="35") WHY
+                div.fw900 MEXICO?
+                
+            br
+            br
+            div.d-block.w-11.w-md-10.mx-auto.text-center.text-uppercase(fit-fz)
+                div.fw400.text-silver Mexico is quickly becoming an
+                div.fw800 emerging market
+                div.fw800 heavyweight.
+                
+        div.col-12.col-md-6
+            img.d-block.w-11.w-md-7.mx-auto(src="media/images/north-america-dots.svg")
+            
+section.sec#sec6-1
+    div.container
+        p.h2.fw800 Mexico will be the world's 7th largest economy in 2050
+        
+        div.row
+            div.col-12.col-md-6
+                div.row
+                    div.col-2
+                    div.col-10
+                        table.table.text-center
+                            thead
+                                tr
+                                    th.fw800 Position
+                                    th.fw800 Country
+                                    th.fw800 CDP at PPA
+                            tbody
+                                each data, inx in dataTable1
+                                    tr
+                                        td=inx
+                                        td=data.country
+                                        td=data.cdp

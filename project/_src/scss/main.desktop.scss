@@ -1,13 +1,14 @@
-@import "inc/vars.scss";
+@import "inc/_vars.scss";
 
 html, body {
     background: white;
     font-family: $ff-montse;
-    font-size: $real-fz;
+    font-size: $fz-site;
+    font-weight: 500;
     overflow-x: hidden;
 }
 
-.resp-mobile { display: none !important; }
+*[resp="desktop"] { display: none !important; }
 
 .main-site {
     display: block;
@@ -22,86 +23,115 @@ html, body {
         min-height: 100px;
         position: relative;
         padding: 30px 0;
-        color: $clr-deepBlack;
-        
-        &.pad-x2 { padding: 60px 0; }
-        &.pad-x3 { padding: 120px 0; }
-        
-        & > .content {
-            display: block;
-            width: 100%;
-            max-width: $standar-width;
-            height: auto;
-            min-height: 100px;
-            margin: 0 auto;
-            //border: 1px solid red;
-        }
-        
-        .bullet {
-            display: block;
-            width: 30px;
-            height: auto;
-            border-top: 2px dotted $clr-text;
-            position: absolute;
-            top: 50%;
-            left: 0%;
-            
-            &:before {
-                content: "";
-                display: block;
-                width: 20px;
-                height: 20px;
-                border: 1px solid $clr-text;
-                border-radius: 50%;
-                position: absolute;
-                top: 0;
-                left: 100%;
-                transform: translate(0%, -50%);
-            }
-            
-            &.inv {
-                left: 100%;
-                transform: translate(-100%, 0);
-                
-                &:before {
-                    left: 0;
-                    transform: translate(-100%, -50%);
-                }
-            }
-        }
+        color: $color-carbon;
         
         &.vline:before {
             content: "";
             display: block;
             width: 0px;
             height: 90%;
+            border-left: 1px dashed #CCC;
+            @include absoluteElem();
+        }
+        
+        & > .content {
+            $mxset: 20;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 100px;
+            margin: ($mxset + 0px) auto;
+            
+            &.strech { max-width: $standar-width; }
+            &.mx-x2 { margin: ($mxset * 2 + 0px) auto;}
+            &.mx-x3 { margin: ($mxset * 3 + 0px) auto;}
+            &.mx-x4 { margin: ($mxset * 4 + 0px) auto;}
+            &.mx-x5 { margin: ($mxset * 5 + 0px) auto;}
+            &.mx-x6 { margin: ($mxset * 6 + 0px) auto;}
+        }
+    }
+}
+
+#sec1 {
+    background-color: $color-deepBlack;
+    
+    .linkein {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        left: 100%;
+        transform: translate(-110%, 0%);
+        color: white;
+        
+        & div:nth-of-type(1) { position: relative; }
+        & div:nth-of-type(1):before {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 100%;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(0%, -50%);
-            border-left: 2px dotted $clr-text;
-            //border-style: 
+            top: 0px;
+            left: calc(100% + 7px);
+            border-left: 1px solid white;
         }
     }
     
-    .the-dot {
+    .sekell-logo {
         display: block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        
-        &.blue { background-color: #006ec7 }
+        width: 40%;
+        max-width: $standar-width;
+        @include absoluteElem("center");
     }
     
-    .relv { position: relative; }
+    .foo-address {
+        color: white;
+        position: absolute;
+        top: calc(100% - 50px);
+        left: 50%;
+        transform: translate(-50%, -100%);
+        
+        & > div:nth-of-type(1) { position: relative; }
+        & > div:nth-of-type(1):after {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: calc(100% + 15px);
+            border-left: 1px solid white;
+        }
+        & > div:nth-of-type(2) {
+            margin: 0 10px 0 30px;
+            
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 40px;
+            }
+        }
+    }
 }
 
-@import "inc/section-1.scss";
-@import "inc/section-2.scss";
-@import "inc/section-4.scss";
-@import "inc/section-5.scss";
-@import "inc/section-8.scss";
-@import "inc/section-9.scss";
+#sec2 {
+    
+    .phrase-1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0;
+    }
+}
 
-@include section1("desktop");
-@include section2("desktop");
+#sec3 {}
+
+#sec4 {}
+
+#sec5 {
+    .title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0;
+    }
+}

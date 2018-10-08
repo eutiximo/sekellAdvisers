@@ -1,103 +1,25 @@
-@import "inc/vars.scss";
+@import "inc/_vars.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
-@import url('../libs/fontawesome/css/all.min.css');
-/*=include ../../../node_modules/bootstrap/dist/css/bootstrap.min.css*/
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-/* Tamaños de textos */
-.h1, h1.title{
-    font-size: toRem(48);
-}
-.h2, h2.title{
-    font-size: toRem(36);
-    line-height: toRem(40);
-}
-.h3, h3.title{
-    font-size: toRem(28);
-}
-.h4, h4.title{
-    font-size: toRem(21);
-}
-.h5, h5.title{
-    font-size: toRem(18);
-}
+/* Font settings */
+@include fontSizes((45, 38, 32, 28, 20, 16), 7);
 
-@media (min-width:993px) {
-    @for $i from 3 through 25 {
-        .fz#{($i * 4)} {
-            font-size: toRem($i * 4);
-            line-height: toRem($i * 5);
-        }
-    }
+.fw300, .fw-thin { font-weight: 300; }
+.fw400, .fw-light-extra { font-weight: 400; }
+.fw500, .fw-light { font-weight: 500; }
+.fw600, .fw-medium { font-weight: 600; }
+.fw700, .fw-bold-semi { font-weight: 700; }
+.fw800, .fw-bold { font-weight: 800; }
+.fw900, .fw-bold-extra { font-weight: 900; }
+
+.text-silver { color: $color-silver; }
+.text-carbon { color: $color-carbon; }
+
+hr {
+    &.set1 { border-top: 1px dashed rgba(black, 0.1); }
 }
 
-/* Colores texto */
-.text-gray, .text-gray > * {
-    color: $clr-text;
-}
-.text-silver, .text-silver > * {
-    color: $clr-silver;
-}
-.text-thin, .text-300 { font-weight: 300; }
-.text-extralight, .text-400 { font-weight: 400; }
-.text-light, .text-500 { font-weight: 500; }
-.text-medium, .text-600 { font-weight: 600; }
-.text-semibold, .text-700 { font-weight: 700; }
-.text-bold, .text-800 { font-weight: 800; }
-.text-extrabold, .text-900 { font-weight: 900; }
-
-/* tamaños de contenedores */
-$array: (
-    (1, 8.33333333%),
-    (2, 16.66666667%),
-    (3, 25%),
-    (4, 33.33333333%),
-    (5, 41.66666667%),
-    (6, 50%),
-    (7, 58.33333333%),
-    (8, 66.66666667%),
-    (9, 75%),
-    (10, 83.33333333%),
-    (11, 91.66666667%),
-    (12, 100%)
-);
-
-@each $item in $array {
-    .xcol-#{nth($item, 1)} { width: nth($item, 2) }
-}
-
-@media (min-width: 576px) {
-    @each $item in $array {
-        .xcol-sm-#{nth($item, 1)} { width: nth($item, 2) }
-    }
-}
-@media (min-width: 768px) {
-    @each $item in $array {
-        .xcol-md-#{nth($item, 1)} { width: nth($item, 2) }
-    }
-}
-@media (min-width: 992px) {
-    @each $item in $array {
-        .xcol-lg-#{nth($item, 1)} { width: nth($item, 2) }
-    }
-}
-@media (min-width: 1200px) {
-    @each $item in $array {
-        .xcol-xl-#{nth($item, 1)} { width: nth($item, 2) }
-    }
-}
-
-/* set row & cols */
-.row {
-    & > *[class*="col-"].relv, .relv { position: relative; }
-    &.no-mx {
-        padding: 0; margin: 0;
-        & > *[class*="col-"] { margin: 0; padding: 0; }
-    }
-}
-
-/* horizontal rule */
-hr.set1 {
-    border-top: 2px dotted $clr-text;
-}
+/* Width cols */
+@include widths();
