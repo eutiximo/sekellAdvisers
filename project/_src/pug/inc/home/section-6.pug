@@ -1,5 +1,5 @@
 -
-    var dataTable1 = [
+    const dataTable1 = [
         {country: "China", cdp: "21,269"},
         {country: "United States", cdp: "18,562"},
         {country: "India", cdp: "8,721"},
@@ -15,6 +15,23 @@
         {country: "South Korea", cdp: "1,929"},
         {country: "Turkey", cdp: "1,906"},
         {country: "Saudi Arabia", cdp: "1,731"}
+    ];
+    const dataTable2 = [
+        {country: "China", cdp: "58,499"},
+        {country: "India", cdp: "44,128"},
+        {country: "United States", cdp: "34,102"},
+        {country: "Indonesia", cdp: "10,502"},
+        {country: "Brazil", cdp: "7,540"},
+        {country: "Russia", cdp: "7,131"},
+        {country: "Mexico", cdp: "6,863", higthlight: true},
+        {country: "Japan", cdp: "6,779"},
+        {country: "Germany", cdp: "6,138"},
+        {country: "United Kingdom", cdp: "5,368"},
+        {country: "Turkey", cdp: "5,184"},
+        {country: "France", cdp: "4,705"},
+        {country: "Saudi Arabia", cdp: "4,694"},
+        {country: "Nigeria", cdp: "4,348"},
+        {country: "Egypt", cdp: "4,333"}
     ];
     
 section.sec#sec6.vline
@@ -51,6 +68,22 @@ section.sec#sec6-1
                                     th.fw800 CDP at PPA
                             tbody
                                 each data, inx in dataTable1
+                                    tr
+                                        td=inx
+                                        td=data.country
+                                        td=data.cdp
+            div.col-12.col-md-6
+                div.row
+                    div.col-2
+                    div.col-10
+                        table.table.text-center
+                            thead
+                                tr.fw800
+                                    th Position
+                                    th Country
+                                    th CDP at PPA
+                            tbody
+                                each data, inx in dataTable2
                                     tr
                                         td=inx
                                         td=data.country
