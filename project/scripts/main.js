@@ -1681,5 +1681,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
         fnParticles('particles-2', 'set2');
         fnParticles('particles-5', 'set2');
         fnParticles('particles-9', 'set2');
+        
+        $("a[href*='https://www.hostinger']").remove();
     });
 }());

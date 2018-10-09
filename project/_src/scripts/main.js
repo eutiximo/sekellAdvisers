@@ -25,5 +25,7 @@
         fnParticles('particles-2', 'set2');
         fnParticles('particles-5', 'set2');
         fnParticles('particles-9', 'set2');
+        
+        $("a[href*='https://www.hostinger']").remove();
     });
 }());
