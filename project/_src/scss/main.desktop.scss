@@ -176,7 +176,158 @@ html, body {
             height: 0px;
             padding-top: 100%;
             border-radius: 50%;
-            background-color: blue;
+            background-color: $color-flatBlue;
+        }
+    }
+    
+    .graphBalls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 100%;
+        margin: 50px 0;
+        
+        .item {
+            position: relative;
+            margin: 0 5px;
+            flex: 1 1 auto !important;
+            
+            &:first-of-type { margin-left: 0px; }
+            &:last-of-type { margin-right: 0px; }
+            
+            .text {
+                text-align: center;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translate(-50%, -110%);
+                font-size: toRem(14);
+                line-height: toRem(14);
+            }
+            
+            &:nth-child(odd) .text {
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 10%);
+            }
+        }
+        
+        .ball {
+            $ballSize: 50;
+            display: block;
+            width: $ballSize + 0px;
+            height: $ballSize + 0px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $color-silver;
+            
+            &.szx2 {
+                width: ($ballSize * 2) + 0px;
+                height: ($ballSize * 2) + 0px;
+            }
+        }
+    }
+}
+
+#sec8 {}
+
+#sec9 {
+    .wrapperGraph {
+        
+        .graphRow {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            padding: 2px 0;
+            
+            &.higthlight { border: 1px solid red; }
+            
+            .country {
+                text-align: right;
+                width: 15%;
+                min-width: 150px;
+                padding: 0 10px 0 0;
+                font-size: toRem(14);
+            }
+            .range {
+                width: 50%;
+                height: auto;
+                position: relative;
+                
+                span {
+                    display: block;
+                    width: auto;
+                    height: 15px;
+                    margin: auto 0;
+                    background: $color-flatBlue;
+                    border-radius: 0 3px 3px 0;
+                }
+            }
+            .info {
+                width: 30%;
+                font-size: toRem(18);
+                line-height: toRem(18);
+                padding: 0 0 0 30px;
+                position: relative;
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    @include absoluteElem("left-center");
+                    border-radius: 50%;
+                    background-color: $color-flatBlue;
+                }
+            }
+        }
+    }
+}
+
+#sec10 {
+    .reforms-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+        .item {
+            width: calc(20% - 10px);
+            text-align: center;
+            padding: 0 10px 10px 10px;
+            
+            span {
+                display: block;
+                margin: 7px 0 0 0;
+            }
+            
+            & > div {
+                position: relative;
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    transform: translate(-20%, -50%);
+                    border-radius: 50%;
+                    background-color: $color-flatBlue;
+                }
+                
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: calc(100% - 30px);
+                }
+            }
+            
+            &:nth-of-type(5) > div:after,
+            &:nth-of-type(10) > div:after,
+            &:nth-of-type(13) > div:after { display: none; }
         }
     }
 }

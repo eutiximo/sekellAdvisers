@@ -1,0 +1,75 @@
+-
+    const dataGraph1 = [
+        {country: "Angola", range: "2%"},
+        {country: "Spain", range: "2.5%"},
+        {country: "Swenden", range: "2.7%"},
+        {country: "Ireland", range: "4%"},
+        {country: "Mexico", range: "6%", info: "Top countries receiving foreign direct investment, 2016"},
+        {country: "Luxemburg", range: "7%"},
+        {country: "France", range: "10%"},
+        {country: "Italy", range: "11%"},
+        {country: "Belgium", range: "12%"},
+        {country: "Canada", range: "14%"},
+        {country: "Russia", range: "14.5%"},
+        {country: "India", range: "16%"},
+        {country: "Cayman Islands", range: "20%"},
+        {country: "Australia", range: "22%"},
+        {country: "Brazil", range: "23%"},
+        {country: "British Virgin Islands", range: "24%"},
+        {country: "Singapore", range: "25%"},
+        {country: "Netherlands", range: "27%"},
+        {country: "Hong Kong", range: "30%"},
+        {country: "China", range: "35%"},
+        {country: "United Kingdom", range: "40%"},
+        {country: "United States", range: "50%"},
+        {country: "Worldwide total", range: "100%"}
+    ],
+    dataGraph2 = [
+        {country: "United Arab Emirates", range: "5%"},
+        {country: "South Korea", range: "6%"},
+        {country: "Mexico", range: "7%", info: "Most attrative destinations for foregin direct investment, 2018"},
+        {country: "Hong Kong", range: "10%"},
+        {country: "Australia", range: "11%"},
+        {country: "Russia", range: "12%"},
+        {country: "Canada", range: "15%"},
+        {country: "Brazil", range: "17%"},
+        {country: "France", range: "18%"},
+        {country: "Japan", range: "20%"},
+        {country: "India", range: "24%"},
+        {country: "United Kingdom", range: "30%"},
+        {country: "Germany", range: "35%"},
+        {country: "China", range: "40%"},
+        {country: "United States", range: "100%"}
+    ];
+    
+section.sec#sec9
+    div.container
+        div.d-block.w-12.w-md-6(style={margin: "0 0 0 auto"})
+            h3.text-uppercase.fw300.text-right Among the #[span.fw600 most attractive worldwide destination for investment]
+           
+        br
+        div.d-block.wrapperGraph
+            each row in dataGraph1
+                if row.info
+                    div.graphRow.higthlight
+                        div.country.fw700=row.country
+                        div.range: span(style={width: row.range})
+                        div.info=row.info
+                else
+                    div.graphRow
+                        div.country=row.country
+                        div.range: span(style={width: row.range})
+                        
+        br
+        br
+        div.d-block.wrapperGraph
+            each row in dataGraph2
+                if row.info
+                    div.graphRow.higthlight
+                        div.country.fw700=row.country
+                        div.range: span(style={width: row.range})
+                        div.info=row.info
+                else
+                    div.graphRow
+                        div.country=row.country
+                        div.range: span(style={width: row.range})

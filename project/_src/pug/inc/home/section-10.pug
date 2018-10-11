@@ -1,0 +1,34 @@
+-
+    var reforms = [
+        {src: "ico-electric.svg", text: "Energy"},
+        {src: "ico-tower.svg", text: "Telecommunications"},
+        {src: "ico-stadistic.svg", text: "Finance"},
+        {src: "ico-give-money.svg", text: "Economic competition"},
+        {src: "ico-castle.svg", text: "Political/electoral"},
+        {src: "ico-book.svg", text: "Education"},
+        {src: "ico-bank.svg", text: "Treasury"},
+        {src: "ico-repare.svg", text: "Labor"},
+        {src: "ico-find-money.svg", text: "Financial reform in local governments"},
+        {src: "ico-wives.svg", text: "Anti-corruption reform"},
+        {src: "ico-find-user.svg", text: "Transparency"},
+        {src: "ico-balanze.svg", text: "Constitutional reform"},
+        {src: "ico-mallet.svg", text: "Constitutional reform"}
+    ];
+    
+section.sec#sec10
+    div.content.mx-x3
+        div.container
+            div.d-block.w-12.w-md-6.text-uppercase.text-center(fit-fz)
+                div.fw300 A constantry
+                div.fw600 Modernizing country
+                
+            br
+            br
+            h2.text-center.text-uppercase.fw600 13 reforms in action
+            
+            br
+            div.reforms-content
+                each reform in reforms
+                    div.item
+                        div: img(src=`media/images/${reform.src}`)
+                        span=reform.text

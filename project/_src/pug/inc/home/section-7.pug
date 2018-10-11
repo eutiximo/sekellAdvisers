@@ -1,3 +1,19 @@
+-
+    var balls = [
+        {size: 2, text: "1994 Nafta"},
+        {size: 1, text: "1995 Comlobia"},
+        {size: 1, text: "1999 Chile"},
+        {size: 1, text: "2000 Israel"},
+        {size: 1, text: "2000 European Union"},
+        {size: 1, text: "2001 Iceland, Liechtenstein, Norway, Switzerland"},
+        {size: 1, text: "2004 Uruguay"},
+        {size: 1, text: "2005 Japan"},
+        {size: 1, text: "2012 Peru"},
+        {size: 1, text: "2013 Central America"},
+        {size: 1, text: "2015 Panama"},
+        {size: 1, text: "2016 Pacific Alliance"},
+        {size: 1, text: "2018 TPP"}
+    ];
 section.sec#sec7
     div.content.mx-x3
         div.container
@@ -17,4 +33,16 @@ section.sec#sec7
                     div: p.text-right 6 economic cpmplmentarity agreements
                     div.hasOrb
                     
+                div.col-12
+                    br
+                    div(scroll="x")
+                        div.graphBalls
+                            each ball in balls
+                                div.item
+                                    if ball.size == 2
+                                        span.ball.szx2
+                                    else
+                                        span.ball
+
+                                    span.text= ball.text
         

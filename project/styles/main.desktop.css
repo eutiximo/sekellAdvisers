@@ -198,5 +198,187 @@ html, body {
   height: 0px;
   padding-top: 100%;
   border-radius: 50%;
-  background-color: blue;
+  background-color: #006EC7;
+}
+
+#sec7 .graphBalls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  margin: 50px 0;
+}
+
+#sec7 .graphBalls .item {
+  position: relative;
+  margin: 0 5px;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 auto !important;
+          flex: 1 1 auto !important;
+}
+
+#sec7 .graphBalls .item:first-of-type {
+  margin-left: 0px;
+}
+
+#sec7 .graphBalls .item:last-of-type {
+  margin-right: 0px;
+}
+
+#sec7 .graphBalls .item .text {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -110%);
+          transform: translate(-50%, -110%);
+  font-size: 0.77778rem;
+  line-height: 0.77778rem;
+}
+
+#sec7 .graphBalls .item:nth-child(odd) .text {
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10%);
+          transform: translate(-50%, 10%);
+}
+
+#sec7 .graphBalls .ball {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #878787;
+}
+
+#sec7 .graphBalls .ball.szx2 {
+  width: 100px;
+  height: 100px;
+}
+
+#sec9 .wrapperGraph .graphRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 2px 0;
+}
+
+#sec9 .wrapperGraph .graphRow.higthlight {
+  border: 1px solid red;
+}
+
+#sec9 .wrapperGraph .graphRow .country {
+  text-align: right;
+  width: 15%;
+  min-width: 150px;
+  padding: 0 10px 0 0;
+  font-size: 0.77778rem;
+}
+
+#sec9 .wrapperGraph .graphRow .range {
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+
+#sec9 .wrapperGraph .graphRow .range span {
+  display: block;
+  width: auto;
+  height: 15px;
+  margin: auto 0;
+  background: #006EC7;
+  border-radius: 0 3px 3px 0;
+}
+
+#sec9 .wrapperGraph .graphRow .info {
+  width: 30%;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+#sec9 .wrapperGraph .graphRow .info:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  border-radius: 50%;
+  background-color: #006EC7;
+}
+
+#sec10 .reforms-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#sec10 .reforms-content .item {
+  width: calc(20% - 10px);
+  text-align: center;
+  padding: 0 10px 10px 10px;
+}
+
+#sec10 .reforms-content .item span {
+  display: block;
+  margin: 7px 0 0 0;
+}
+
+#sec10 .reforms-content .item > div {
+  position: relative;
+}
+
+#sec10 .reforms-content .item > div:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  border-radius: 50%;
+  background-color: #006EC7;
+}
+
+#sec10 .reforms-content .item > div img {
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 30px);
+}
+
+#sec10 .reforms-content .item:nth-of-type(5) > div:after,
+#sec10 .reforms-content .item:nth-of-type(10) > div:after,
+#sec10 .reforms-content .item:nth-of-type(13) > div:after {
+  display: none;
 }
