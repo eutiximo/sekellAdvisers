@@ -72,6 +72,132 @@ html, body {
   margin: 120px auto;
 }
 
+.main-nav {
+  display: inline-block;
+  left: 2%;
+  top: 2%;
+  position: fixed;
+  z-index: 9999;
+}
+
+.main-nav:not(.burger-mode) {
+  -webkit-animation: fadeInLeft 1s both;
+          animation: fadeInLeft 1s both;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.main-nav ul li {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.main-nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 2px 0;
+  font-size: 1.11111rem;
+  font-weight: 700;
+  color: white;
+}
+
+.main-nav.burger-mode {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  -webkit-animation: fadeIn 1s both;
+          animation: fadeIn 1s both;
+}
+
+.main-nav.burger-mode:before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 459 459"><path fill="#000000" d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/></svg>');
+  background-size: contain;
+}
+
+.main-nav.burger-mode.open:before {
+  background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 357 357"><polygon fill="#000000" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/></svg>');
+}
+
+.main-nav.burger-mode ul {
+  display: none;
+  position: absolute;
+  left: calc(100% - 1px);
+  padding: 10px;
+  background-color: white;
+}
+
+.main-nav.burger-mode ul a {
+  color: black;
+}
+
+.main-nav.burger-mode.open ul {
+  display: block;
+  -webkit-animation: fadeInLeft 500ms;
+          animation: fadeInLeft 500ms;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #sec1 {
   background-color: #141414;
 }
@@ -280,7 +406,7 @@ html, body {
 }
 
 #sec9 .wrapperGraph .graphRow.higthlight {
-  border: 1px solid red;
+  border: 1px dashed red;
 }
 
 #sec9 .wrapperGraph .graphRow .country {

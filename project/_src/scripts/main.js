@@ -100,9 +100,87 @@ var $g, window, document;
         });
     };
     
+    /*
+     *
+     */
+    $g.methos.nav = {
+        $element: undefined,
+        
+        desktopMode: function () {
+            var self = this,
+                offsetElem = self.$element.height(),
+                burgerModeActive = false,
+                burgerModeMenuIsView = false;
+            
+            function changeSkin() {
+                var scrollTop = $(window).scrollTop();
+                
+                if (scrollTop > offsetElem && !burgerModeActive) {
+                    burgerModeActive = true;
+                    self.$element.addClass("burger-mode");
+                    
+                } else if (scrollTop < offsetElem && burgerModeActive) {
+                    burgerModeActive = burgerModeMenuIsView = false;
+                    self.$element.removeClass("burger-mode open");
+                }
+            }
+            
+            function toogleViewOptions() {
+                if (!burgerModeMenuIsView) {
+                    self.$element.addClass("open");
+                    burgerModeMenuIsView = true;
+                } else {
+                    self.$element.removeClass("open");
+                    burgerModeMenuIsView = false;
+                }
+            }
+            
+            self.$element.on("click", function () {
+                if ($(this).hasClass("burger-mode")) toogleViewOptions();
+            });
+            $(window).on("scroll", changeSkin);
+            changeSkin();
+        },
+        
+        goSection: function () {
+            var self = this;
+            
+            function core(Elem) {
+                var getSecId = Elem.attr("data-go"),
+                    getPositionSection = $("#" + getSecId),
+                    setScrollTop;
+                
+                if (getSecId) {
+                    setScrollTop = getPositionSection.offset().top;
+                } else {
+                    setScrollTop = 0;
+                }
+                
+                $("html, body").stop().animate({scrollTop: setScrollTop}, 1000);
+            }
+            
+            self.$element.on("click", "a", function () {
+                core($(this));
+            });
+            
+            setTimeout(function () {
+                core(self.$element.find("a[href='" + window.location.hash + "']"));
+            }, 1000);
+        },
+        
+        init: function () {
+            var self = this;
+            
+            self.$element = $("nav.main-nav");
+            
+            self.desktopMode();
+            self.goSection();
+        }
+    };
+    
     //Init
     $g.methos.windowResize();
     $g.methos.suitSection();
-    //$g.methos.fitFontSize();
+    $g.methos.nav.init();
     setTimeout($g.methos.fitFontSize, 100);
 })();

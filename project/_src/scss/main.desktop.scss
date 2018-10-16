@@ -52,6 +52,94 @@ html, body {
     }
 }
 
+.main-nav {
+    display: inline-block;
+    left: 2%;
+    top: 2%;
+    position: fixed;
+    z-index: 9999;
+    
+    &:not(.burger-mode) {
+        animation: fadeInLeft 1s both;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        
+        li {
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            
+            a {
+                display: block;
+                width: 100%;
+                padding: 2px 0;
+                font-size: toRem(20);
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+    
+    &.burger-mode {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        animation: fadeIn 1s both;
+        
+        &:before {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 35px;
+            @include absoluteElem("center");
+            background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 459 459"><path fill="#000000" d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/></svg>');
+            background-size: contain;
+        }
+        
+        &.open:before {
+            background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 357 357"><polygon fill="#000000" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/></svg>');
+        }
+        
+        ul {
+            display: none;
+            position: absolute;
+            left: calc(100% - 1px);
+            padding: 10px;
+            background-color: white;
+            
+            a { color: black; }
+        }
+        &.open ul {
+            display: block;
+            animation: fadeInLeft 500ms;
+        }
+    }
+    
+    @keyframes fadeInLeft {
+        0% {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
 #sec1 {
     background-color: $color-deepBlack;
     
@@ -241,7 +329,7 @@ html, body {
             width: 100%;
             padding: 2px 0;
             
-            &.higthlight { border: 1px solid red; }
+            &.higthlight { border: 1px dashed red; }
             
             .country {
                 text-align: right;
