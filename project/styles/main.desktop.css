@@ -23,6 +23,7 @@ html, body {
   height: auto;
   min-height: 100px;
   position: relative;
+  z-index: 2;
   padding: 30px 0;
   color: #4D4D4D;
 }
@@ -106,6 +107,12 @@ html, body {
   font-size: 1.11111rem;
   font-weight: 700;
   color: white;
+  opacity: 0.5;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a.act {
+  opacity: 1;
+  text-decoration: none;
 }
 
 .main-nav.burger-mode {
@@ -198,6 +205,15 @@ html, body {
   }
 }
 
+#particles-full {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: 0;
+}
+
 #sec1 {
   background-color: #141414;
 }
@@ -247,6 +263,14 @@ html, body {
   left: 50%;
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
+}
+
+#sec1 .foo-address > div span:last-of-type {
+  opacity: 0.4;
+}
+
+#sec1 .foo-address > div:nth-of-type(1) {
+  position: relative;
 }
 
 #sec1 .foo-address > div:nth-of-type(1) {

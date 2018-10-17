@@ -1560,6 +1560,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
     $g = {
         ww: window.innerWidth,
         wh: window.innerHeight,
+        dh: $(document).height(),
         methos: {}
     };
     
@@ -1570,6 +1571,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
         window.addEventListener('resize', function () {
             $g.ww = window.innerWidth;
             $g.wh = window.innerHeigh;
+            $g.dh = $(document).height();
         });
     };
     
@@ -1594,7 +1596,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
     };
     
     /*
-     * 
+     * Funcion para hacer adaptar el tamaño de fuente al contenedor en una sola linea
      */
     $g.methos.fitFontSize = function () {
         var Elems = $("[fit-fz]");
@@ -1651,7 +1653,7 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
     };
     
     /*
-     *
+     * Funcion para administrar el conportamiento del NAV
      */
     $g.methos.nav = {
         $element: undefined,
@@ -1697,10 +1699,11 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
             
             function core(Elem) {
                 var getSecId = Elem.attr("data-go"),
-                    getPositionSection = $("#" + getSecId),
+                    getPositionSection,
                     setScrollTop;
                 
                 if (getSecId) {
+                    getPositionSection = $("#" + getSecId);
                     setScrollTop = getPositionSection.offset().top;
                 } else {
                     setScrollTop = 0;
@@ -1718,6 +1721,60 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
             }, 1000);
         },
         
+        currentSection: function() {
+            var elems = this.$element.find("a"),
+                dataSec = [],
+                linkAct,
+                linksAllDisabled = true;
+            
+            elems.each(function (index, value) {
+                var getDataGo = $(value).attr("data-go"),
+                    secBoundingRect;
+                
+                if (getDataGo) {
+                    secBoundingRect = document.getElementById(getDataGo).getBoundingClientRect();
+                    dataSec.push({
+                        elem: $(value),
+                        sec: getDataGo,
+                        positionSec: [secBoundingRect.top, secBoundingRect.top + secBoundingRect.height]
+                    });
+                }
+            });
+            
+            function core() {
+                var currentScrollTop = $(window).scrollTop(),
+                    getCurrentSecInView;
+                
+                getCurrentSecInView = dataSec.filter(function (value, index) {
+                    return currentScrollTop >= value.positionSec[0] && currentScrollTop < value.positionSec[1];
+                });
+                
+                getCurrentSecInView = getCurrentSecInView.length ? getCurrentSecInView[0] : {};
+                
+                if (getCurrentSecInView.sec && getCurrentSecInView.sec !== linkAct) {
+                    let prevActElem;
+                    
+                    getCurrentSecInView.elem.addClass("act");
+                    window.location.hash = getCurrentSecInView.elem.attr("href");
+                    
+                    prevActElem = dataSec.filter(function (value) { return linkAct === value.sec; });
+                    prevActElem = prevActElem.length ? prevActElem[0] : {};
+                    if (prevActElem.sec) { prevActElem.elem.removeClass("act"); }
+                    
+                    linkAct = getCurrentSecInView.sec;
+                    linksAllDisabled = false;
+                    
+                } else if (!linksAllDisabled && !getCurrentSecInView.sec) {
+                    elems.removeClass("act");
+                    linksAllDisabled = true;
+                    linkAct = undefined;
+                }
+            }
+            
+            $(window).scroll(core);
+            core();
+        },
+        
         init: function () {
             var self = this;
             
@@ -1725,12 +1782,97 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
             
             self.desktopMode();
             self.goSection();
+            self.currentSection();
         }
     };
+    
+    /*
+     * Funcion para generar un canvas con animacion de particulas.
+     */
+    $g.methos.particles = {
+        sets: [
+            {
+                id: "particles-sec1",
+                settings: {
+                    particles: {
+                        number: { value: 10 },
+                        move: { random: true, speed: 5, out_mode: "bounce" },
+                        color: { value: "#FFFFFF" },
+                        size: {
+                            value: 7, random: false,
+                            anim: { size_min: 5, speed: 200 }
+                        },
+                        line_linked: { distance: 350, color: "#FFFFFF", opacity: 0.5 },
+                        opacity: { value: 0.5, random: true }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onclick: { enable: false }
+                        }
+                    }
+                }
+            },
+            {
+                id: "particles-full",
+                settings: {
+                    particles: {
+                        number: { value: 5 },
+                        move: { random: true, speed: 15, out_mode: "out"},
+                        color: { value: "#000000"},
+                        size: {
+                            value: 7, random: false,
+                            anim: {size_min: 5, speed: 200}
+                        },
+                        line_linked: { distance: 400, color: "#000000", opacity: 0.3},
+                        opacity: { value: 0.3, random: true}
+                    },
+                    interactivity: {}
+                },
+                beforeAction: function () {
+                    var elem = $("#" + this.id),
+                        sec1Height,
+                        docHeight;
+                    
+                    function miniCore () {
+                        sec1Height = $("#sec1").outerHeight();
+                        docHeight = $(document).outerHeight() - sec1Height;
+                        
+                        elem.css({top: sec1Height + "px", height: docHeight + "px"});
+                    }
+                    miniCore();
+                    
+                    $(window).on("resize", miniCore);
+                }
+            }
+        ],
+        
+        Run: function () {
+            function runPaticlesJS(idElement, settings) {
+                particlesJS(idElement, settings);
+            }
+            
+            this.sets.forEach(function (value) {
+                if (value.beforeAction && typeof value.beforeAction === "function") {
+                    value.beforeAction();
+                }
+                
+                if (Array.isArray(value.id)) {
+                    value.id.forEach(function (id) {
+                        runPaticlesJS(id, value.settings);
+                    });
+                    
+                } else {
+                    runPaticlesJS(value.id, value.settings);
+                }
+            });
+        }
+    }
     
     //Init
     $g.methos.windowResize();
     $g.methos.suitSection();
     $g.methos.nav.init();
+    $g.methos.particles.Run();
     setTimeout($g.methos.fitFontSize, 100);
 })();

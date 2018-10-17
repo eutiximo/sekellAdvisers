@@ -1,4 +1,5 @@
 section.sec#sec1(suit)
+    div#particles-sec1
     div.content
         a.linkein.d-flex.justify-content-around.align-items-center(href="#" target="_blank")
             div.w-2: img(src="media/assets/linkein-orb.svg").img-fluid.d-block.mx-auto
@@ -7,7 +8,15 @@ section.sec#sec1(suit)
         div.sekell-logo
             img(src="media/assets/logo-white.svg").img-fluid
 
-        div.foo-address.d-flex.justify-content-center.align-items-center.text-uppercase.w-10.w-lg-4.fz12
-            div Business<br>strategy
+        div.foo-address.d-flex.justify-content-center.align-items-center.text-uppercase.w-10.w-lg-4.h6
+            div #[span Business]<br>#[span strategy]
             div: img(src="media/assets/map-marker.svg")
             div Varsivia 36 Colonia<br>Juarez. Mexico City
+            div
+                table
+                    tr
+                        td(include="media/assets/ico-mail.svg")
+                        td info@sekell.com
+                    tr
+                        td
+                        td +52 (55) 8574 6753
