@@ -1,8 +1,9 @@
 var gulp = require('gulp'),
     pug = require('gulp-pug'),
     sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
+    minify = require('gulp-minify'),
     include = require('gulp-include'),
+    htmlReplace = require("gulp-html-replace"),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     projectPath = './project/';
@@ -35,11 +36,15 @@ gulp.task('sass:compile', function () {
  */
 gulp.task('pug:compile', function () {
     var srcPath = projectPath + '_src/pug/*.pug',
-        destPath = projectPath;
+        destPath = projectPath,
+        lenguagePack = require("./project/_src/i18n.json");
     
     gulp.src(srcPath)
     .pipe(pug({
-        pretty: true
+        pretty: true,
+        data: {
+            i18n: lenguagePack
+        }
     }))
     .pipe(gulp.dest(destPath));
 });
@@ -69,7 +74,6 @@ gulp.task('browserSync', function () {
     
     gulp.watch([
         (projectPath + "**/*.html"),
-        (projectPath + "**/*.css"),
         (projectPath + "**/*.js"),
         (projectPath + "media/**/*.*")
     ]).on('change', browserSync.reload);
@@ -82,6 +86,46 @@ gulp.task('watchers', function () {
     gulp.watch(projectPath + '**/*.pug', ['pug:compile']);
     gulp.watch(projectPath + '**/*.js', ['js:compile']);
     gulp.watch(projectPath + '**/*.scss', ['sass:compile']);
+});
+
+/*
+ * Funcion para minificar y construir projecto
+ */
+gulp.task("build:dist", function () {
+    //buid SASS
+    gulp.src("./project/_src/scss/*.scss")
+    .pipe(sass({
+        outputStyle: "compressed"
+    }))
+    .pipe(autoprefixer({
+        versions: ["last 2 browsers"]
+    }))
+    .pipe(include())
+    .pipe(gulp.dest("./dist/styles/"));
+    
+    //Build JS
+    gulp.src("./project/_src/scripts/*.js")
+    .pipe(include())
+    .pipe(minify())
+    .pipe(gulp.dest("./dist/scripts/"));
+    
+    //Build HTML
+    gulp.src("./project/_src/pug/*.pug")
+    .pipe(pug({
+        pretty: false
+    }))
+    .pipe(htmlReplace({
+        "JS": "scripts/main-min.js"
+    }))
+    .pipe(gulp.dest("./dist/"));
+    
+    //Move media resourses
+    gulp.src("./project/media/**/*.*")
+    .pipe(gulp.dest("./dist/media/"));
+    
+    //Move libs
+    gulp.src("./project/libs/**/*.*")
+    .pipe(gulp.dest("./dist/libs/"))
 });
 
 /*

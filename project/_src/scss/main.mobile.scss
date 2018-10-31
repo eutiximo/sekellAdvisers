@@ -1,0 +1,438 @@
+@import "inc/_vars.scss";
+
+html, body {
+    background: white;
+    font-family: $ff-montse;
+    font-size: $fz-site;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+*[resp="desktop"] { display: none !important; }
+
+.main-site {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+    .sec {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        position: relative;
+        z-index: 2;
+        padding: 30px 0;
+        color: $color-carbon;
+        
+        & > .content {
+            $mxset: 20;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 100px;
+            margin: ($mxset + 0px) auto;
+            
+            &.strech { max-width: $standar-width; }
+            &.mx-x2 { margin: ($mxset * 2 + 0px) auto;}
+            &.mx-x3 { margin: ($mxset * 3 + 0px) auto;}
+            &.mx-x4 { margin: ($mxset * 4 + 0px) auto;}
+            &.mx-x5 { margin: ($mxset * 5 + 0px) auto;}
+            &.mx-x6 { margin: ($mxset * 6 + 0px) auto;}
+        }
+    }
+}
+
+.main-nav {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+    top: 2%;
+    position: fixed;
+    z-index: 9999;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    animation: fadeIn 1s both;
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        @include absoluteElem("center");
+        background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 459 459"><path fill="#000000" d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/></svg>');
+        background-size: contain;
+    }
+
+    &.open:before {
+        background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 357 357"><polygon fill="#000000" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/></svg>');
+    }
+    
+    &.open ul {
+        display: block;
+        animation: fadeInLeft 500ms;
+    }
+    
+    ul {
+        display: none;
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        position: absolute;
+        left: calc(100% - 1px);
+        text-transform: uppercase;
+        background-color: white;
+        
+        li {
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            
+            a {
+                display: block;
+                width: 100%;
+                padding: 2px 0;
+                font-size: toRem(20);
+                font-weight: 700;
+                color: black;
+                opacity: 0.5;
+                
+                &:hover, &.act {
+                    opacity: 1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    @keyframes fadeInLeft {
+        0% {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+#particles-full {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 0;
+}
+
+#sec1 {
+    background-color: $color-deepBlack;
+    
+    .linkein {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        left: 100%;
+        transform: translate(-110%, 0%);
+        color: white;
+        
+        & div:nth-of-type(1) { position: relative; }
+        & div:nth-of-type(1):before {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: calc(100% + 7px);
+            border-left: 1px solid white;
+        }
+    }
+    
+    .sekell-logo {
+        display: block;
+        width: 80%;
+        max-width: $standar-width;
+        @include absoluteElem("center");
+    }
+    
+    .foo-address {
+        width: 100%;
+        position: absolute;
+        top: calc(100% - 50px);
+        left: 50%;
+        transform: translate(-50%, -70%);
+        color: white;
+        
+        & > div {
+            margin: 0 10px 10px 10px;
+            
+            &:first-of-type { margin-left: 0px; }
+            &:last-of-type { margin-right: 0px; }
+            
+            span:last-of-type { opacity: 0.4; }
+            
+            &.separator {
+                position: relative;
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 0px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: calc(100% + 10px);
+                    border-left: 1px solid white;
+                }
+            }
+            
+            &:nth-of-type(4) {
+                margin: 0 10px 0 30px;
+            }
+        }
+    }
+}
+
+#sec2 {
+    .phrase-1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0;
+    }
+}
+
+#sec5 {
+    .title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0;
+    }
+}
+
+#sec6-1 {
+    .table {
+        tr, td, th  {
+            border: 1px dashed $color-silver;
+            padding: 2px;
+        }
+        
+        .higthlight { background: yellow; }
+    }
+    
+    .yearBox {
+        text-align: center;
+        position: relative;
+        
+        span {
+            font-size: toRem(58);
+            font-weight: bold;
+        }
+    }
+}
+
+#sec7 {
+    .hasOrb {
+        width: 100%;
+        max-width: 30px;
+        margin: 0 10px;
+        
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0px;
+            padding-top: 100%;
+            border-radius: 50%;
+            background-color: $color-flatBlue;
+        }
+    }
+    
+    .graphBalls {
+        display: inline-block;
+        margin: 50px 10px;
+        text-align: center;
+        
+        .item {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            margin: 0 10px;
+            
+            &:first-of-type { margin-left: 0px; }
+            &:last-of-type { margin-right: 0px; }
+            
+            .text {
+                text-align: center;
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translate(-50%, -110%);
+                font-size: toRem(14);
+                line-height: toRem(14);
+            }
+            
+            &:nth-child(odd) .text {
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 10%);
+            }
+        }
+        
+        .ball {
+            $ballSize: 50;
+            display: block;
+            width: $ballSize + 0px;
+            height: $ballSize + 0px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $color-silver;
+            
+            &.szx2 {
+                width: ($ballSize * 2) + 0px;
+                height: ($ballSize * 2) + 0px;
+            }
+        }
+    }
+}
+
+#sec9 {
+    .wrapperGraph {
+        
+        .graphRow {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            padding: 2px 0;
+            
+            &.higthlight {
+                border: 1px dashed red;
+                position: relative;
+            }
+            
+            .country {
+                text-align: right;
+                width: 10%;
+                min-width: 85px;
+                padding: 0 10px 0 0;
+                font-size: toRem(12);
+            }
+            .range {
+                width: 50%;
+                height: auto;
+                position: relative;
+                
+                span {
+                    display: block;
+                    width: auto;
+                    height: 15px;
+                    margin: auto 0;
+                    background: $color-flatBlue;
+                    border-radius: 0 3px 3px 0;
+                }
+            }
+            .info {
+                width: 35%;
+                font-size: toRem(18);
+                line-height: toRem(18);
+                padding: 0 0 0 30px;
+                position: relative;
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    @include absoluteElem("left-center");
+                    border-radius: 50%;
+                    background-color: $color-flatBlue;
+                }
+                
+                @media(max-width: 559px) {
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(1%, -50%);
+                    background-color: white;
+                    border: 1px dashed red;
+                    padding: 5px 5px 5px 30px;
+                }
+            }
+            
+        }
+    }
+}
+
+#sec10 {
+    .reforms-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+        .item {
+            width: calc(20% - 10px);
+            text-align: center;
+            padding: 0 10px 10px 10px;
+            
+            @media(min-width:1px) {
+                width: calc(50% - 10px);
+            }
+            @media(min-width:576px) {
+                width: calc(25% - 10px);
+            }
+            
+            span {
+                display: block;
+                margin: 7px 0 0 0;
+                font-size: toRem(15);
+            }
+            
+            & > div {
+                position: relative;
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    transform: translate(-20%, -50%);
+                    border-radius: 50%;
+                    background-color: $color-flatBlue;
+                }
+                
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: calc(100% - 30px);
+                }
+            }
+            
+            @media(min-width:1px) and (max-width: 575px) {
+                &:nth-of-type(even) > div:after,
+                &:last-of-type > div:after{ display: none; }
+            }
+            @media(min-width:576px) {
+                &:nth-of-type(4n) > div:after,
+                &:last-of-type > div:after{ display: none; }
+            }
+        }
+    }
+}

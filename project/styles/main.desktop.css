@@ -81,7 +81,7 @@ html, body {
   z-index: 9999;
 }
 
-.main-nav:not(.burger-mode) {
+.main-nav:not(.burger-mode), .main-nav:not(.burger-mode-attach) {
   -webkit-animation: fadeInLeft 1s both;
           animation: fadeInLeft 1s both;
 }
@@ -115,7 +115,7 @@ html, body {
   text-decoration: none;
 }
 
-.main-nav.burger-mode {
+.main-nav.burger-mode, .main-nav.burger-mode-attach {
   width: 50px;
   height: 50px;
   background-color: white;
@@ -125,7 +125,7 @@ html, body {
           animation: fadeIn 1s both;
 }
 
-.main-nav.burger-mode:before {
+.main-nav.burger-mode:before, .main-nav.burger-mode-attach:before {
   content: "";
   display: block;
   width: 35px;
@@ -139,11 +139,11 @@ html, body {
   background-size: contain;
 }
 
-.main-nav.burger-mode.open:before {
+.main-nav.burger-mode.open:before, .main-nav.burger-mode-attach.open:before {
   background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 357 357"><polygon fill="#000000" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"/></svg>');
 }
 
-.main-nav.burger-mode ul {
+.main-nav.burger-mode ul, .main-nav.burger-mode-attach ul {
   display: none;
   position: absolute;
   left: calc(100% - 1px);
@@ -151,11 +151,11 @@ html, body {
   background-color: white;
 }
 
-.main-nav.burger-mode ul a {
+.main-nav.burger-mode ul a, .main-nav.burger-mode-attach ul a {
   color: black;
 }
 
-.main-nav.burger-mode.open ul {
+.main-nav.burger-mode.open ul, .main-nav.burger-mode-attach.open ul {
   display: block;
   -webkit-animation: fadeInLeft 500ms;
           animation: fadeInLeft 500ms;
@@ -265,19 +265,27 @@ html, body {
           transform: translate(-50%, -100%);
 }
 
+#sec1 .foo-address > div {
+  margin: 0 20px;
+}
+
+#sec1 .foo-address > div:first-of-type {
+  margin-left: 0px;
+}
+
+#sec1 .foo-address > div:last-of-type {
+  margin-right: 0px;
+}
+
 #sec1 .foo-address > div span:last-of-type {
   opacity: 0.4;
 }
 
-#sec1 .foo-address > div:nth-of-type(1) {
+#sec1 .foo-address > div.separator {
   position: relative;
 }
 
-#sec1 .foo-address > div:nth-of-type(1) {
-  position: relative;
-}
-
-#sec1 .foo-address > div:nth-of-type(1):after {
+#sec1 .foo-address > div.separator:after {
   content: "";
   display: block;
   width: 0px;
@@ -288,14 +296,8 @@ html, body {
   border-left: 1px solid white;
 }
 
-#sec1 .foo-address > div:nth-of-type(2) {
+#sec1 .foo-address > div:nth-of-type(4) {
   margin: 0 10px 0 30px;
-}
-
-#sec1 .foo-address > div:nth-of-type(2) img {
-  display: block;
-  margin: 0 auto;
-  width: 40px;
 }
 
 #sec2 .phrase-1 {

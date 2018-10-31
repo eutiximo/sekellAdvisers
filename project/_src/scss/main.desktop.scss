@@ -60,7 +60,7 @@ html, body {
     position: fixed;
     z-index: 9999;
     
-    &:not(.burger-mode) {
+    &:not(.burger-mode), &:not(.burger-mode-attach) {
         animation: fadeInLeft 1s both;
     }
     
@@ -93,7 +93,7 @@ html, body {
         }
     }
     
-    &.burger-mode {
+    &.burger-mode, &.burger-mode-attach {
         width: 50px;
         height: 50px;
         background-color: white;
@@ -197,31 +197,29 @@ html, body {
         transform: translate(-50%, -100%);
         
         & > div {
+            margin: 0 20px;
+            &:first-of-type { margin-left: 0px; }
+            &:last-of-type { margin-right: 0px; }
             
             span:last-of-type { opacity: 0.4; }
             
-            &:nth-of-type(1) {
+            &.separator {
                 position: relative;
+                
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 0px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: calc(100% + 15px);
+                    border-left: 1px solid white;
+                }
             }
-        }
-        & > div:nth-of-type(1) { position: relative; }
-        & > div:nth-of-type(1):after {
-            content: "";
-            display: block;
-            width: 0px;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: calc(100% + 15px);
-            border-left: 1px solid white;
-        }
-        & > div:nth-of-type(2) {
-            margin: 0 10px 0 30px;
             
-            img {
-                display: block;
-                margin: 0 auto;
-                width: 40px;
+            &:nth-of-type(4) {
+                margin: 0 10px 0 30px;
             }
         }
     }

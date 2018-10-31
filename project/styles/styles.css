@@ -9768,3 +9768,31 @@ hr.set1 {
     width: 100%;
   }
 }
+
+*[resp] {
+  display: none !important;
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+  *[resp*="xs"] {
+    display: block !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  *[resp*="sm"] {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  *[resp*="md"] {
+    display: block !important;
+  }
+}
+
+@media (min-width: 993px) {
+  *[resp*="lg"] {
+    display: block !important;
+  }
+}

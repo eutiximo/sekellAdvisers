@@ -1,0 +1,36 @@
+-var currentPage = 'Home';
+-var titleText = 'Sekell Advisers | Home';
+
+doctype html
+html
+    head
+        include inc/index.head.pug
+        
+    body
+        include inc/index.nav.pug
+            
+        main.main-site
+            include inc/home/section-1.pug
+            
+            div#particles-full
+            include inc/home/section-2.pug
+            
+            include inc/home/section-3.pug
+            
+            include inc/home/section-4.pug
+            
+            include inc/home/section-5.pug
+            
+            include inc/home/section-6.pug
+            
+            include inc/home/section-7.pug
+            
+            include inc/home/section-8.pug
+            
+            include inc/home/section-9.pug
+            
+            include inc/home/section-10.pug
+                        
+        // build:JS 
+        script(src="scripts/main.js")
+        // endbuild 

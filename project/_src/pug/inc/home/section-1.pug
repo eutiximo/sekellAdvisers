@@ -1,22 +1,32 @@
 section.sec#sec1(suit)
     div#particles-sec1
     div.content
-        a.linkein.d-flex.justify-content-around.align-items-center(href="#" target="_blank")
+        a.linkein.d-flex.justify-content-around.align-items-center(href="https://www.linkedin.com/company/sekell-advisers/" target="_blank")
             div.w-2: img(src="media/assets/linkein-orb.svg").img-fluid.d-block.mx-auto
             div Sekell Advisers
 
         div.sekell-logo
             img(src="media/assets/logo-white.svg").img-fluid
-
-        div.foo-address.d-flex.justify-content-center.align-items-center.text-uppercase.w-10.w-lg-4.h6
-            div #[span Business]<br>#[span strategy]
-            div: img(src="media/assets/map-marker.svg")
-            div Varsivia 36 Colonia<br>Juarez. Mexico City
+            
+        div.foo-address.d-flex.flex-wrap.justify-content-center.align-items-center.text-center.h6
+            div.separator
+                span=i18n["home.sec1.roleBusiness.label1"].en_US
+                br
+                span=i18n["home.sec1.roleBusiness.label1"].en_US
+            div.separator
+                table
+                    tr 
+                        td(width="45")
+                            img(src="media/assets/map-marker.svg" style={margin: "0 5px 0 0"})
+                        td
+                            span=i18n["home.sec1.address.label1"].en_US
+                            br
+                            span.opc04=i18n["home.sec1.address.label2"].en_US
             div
                 table
                     tr
                         td(include="media/assets/ico-mail.svg")
-                        td info@sekell.com
+                        td=i18n["home.sec1.contact.label1"].en_US
                     tr
                         td
-                        td +52 (55) 8574 6753
+                        td: span.pc04=i18n["home.sec1.contact.label2"].en_US

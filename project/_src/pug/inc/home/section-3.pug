@@ -1,29 +1,31 @@
 section.sec#sec3.vline
     div.content
         div.row
-            div.col-12.col-md-5.col-lg-6
-                picture.d-block.w-12.w-sm-10
+            div.col-12.col-sm-6.col-md-5.col-lg-6
+                div.d-block.w-12.w-sm-10
+                picture.d-block.w-12.w-sm-10.w-md-7
                     source(class="w-100" srcset="media/images/photo-01.jpg" media="(max-width:767px)")
                     source(class="w-100" srcset="media/images/pagina_web-22.png" media="(min-width:768px)")
-                    img(src="media/images/pagina_web-22.png" alt="...")
+                    img(src="media/images/pagina_web-22.png" alt="...").w-100
                 br
                 
-                div.d-block.w-11.w-md-10.mx-auto
-                    p.h5 In addition, we offer dedicated, <b class="text-carbon">SPANISH-SPEAKING BUSINESS AGENTS</b> to be <b class="text-carbon">YOUR REPRESENTATIVE</b> on the ground. Our agents:
+                div.d-block.w-11.w-md-10.mx-auto(resp="sm,md,lg" transfer="#sec4 .container > .row:eq(0) > div:eq(0) div[resp]")
+                    p.h5 #{i18n["home.sec3.text1.label1"].en_US} <b class="text-carbon">#{i18n["home.sec3.text1.label2"].en_US}</b> #{i18n["home.sec3.text1.label3"].en_US} <b class="text-carbon">#{i18n["home.sec3.text1.label4"].en_US}</b> #{i18n["home.sec3.text1.label5"].en_US}
+                    br
                     
-            div.col-12.col-md-7.col-lg-6
+            div.col-12.col-sm-6.col-md-7.col-lg-6
                 h1.text-center.text-uppercase.fw900
-                    span.text-silver Our 
-                    span.text-carbon Services
+                    span.text-silver #{i18n["home.sec3.title1.label1"].en_US} 
+                    span.text-carbon=i18n["home.sec3.title1.label2"].en_US
                 br
                 
                 div.d-block.w-11.w-md-10.mx-auto
-                    p.h4.text-uppercase.text-center We offer a <b class="text-carbon">a full array</b> of business development and marketing services, including:
+                    p.h4.text-uppercase.text-center #{i18n["home.sec3.text2.label1"].en_US} <b class="text-carbon">#{i18n["home.sec3.text2.label2"].en_US}</b> #{i18n["home.sec3.text2.label3"].en_US}
                     br
                     
                     ul
-                        li: p In-country office space and contact information
-                        li: p Translation of marketing material and websites
-                        li: p Identifying and vetting distributors, brokers, and legal representation
-                        li: p Assistance taking advantage of government grants and financing options for exporting
-                        li: p Logistics for in-country business travel
+                        li: p=i18n["home.sec3.list1.label1"].en_US
+                        li: p=i18n["home.sec3.list1.label2"].en_US
+                        li: p=i18n["home.sec3.list1.label3"].en_US
+                        li: p=i18n["home.sec3.list1.label4"].en_US
+                        li: p=i18n["home.sec3.list1.label5"].en_US

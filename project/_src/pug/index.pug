@@ -1,6 +1,6 @@
 -var currentPage = 'Home';
 -var titleText = 'Sekell Advisers | Home';
-
+    
 doctype html
 html
     head
@@ -8,7 +8,7 @@ html
         
     body
         include inc/index.nav.pug
-            
+        
         main.main-site
             include inc/home/section-1.pug
             
@@ -31,4 +31,6 @@ html
             
             include inc/home/section-10.pug
                         
+        // build:JS 
         script(src="scripts/main.js")
+        // endbuild 

@@ -107,8 +107,9 @@ var $g, window, document;
      */
     $g.methos.nav = {
         $element: undefined,
+        isMobile: false,
         
-        desktopMode: function () {
+        menuSkin: function () {
             var self = this,
                 offsetElem = self.$element.height(),
                 burgerModeActive = false,
@@ -138,7 +139,7 @@ var $g, window, document;
             }
             
             self.$element.on("click", function () {
-                if ($(this).hasClass("burger-mode")) toogleViewOptions();
+                if ($(this).hasClass("burger-mode") || $(this).hasClass("bm-attach")) toogleViewOptions();
             });
             $(window).on("scroll", changeSkin);
             changeSkin();
@@ -225,15 +226,115 @@ var $g, window, document;
             core();
         },
         
+        pipe: function (ww) {
+            var self = this;
+            
+            if (ww >= 1028 && self.isMobile) {
+                self.isMobile = false;
+                self.$element.removeClass("bm-attach");
+                
+            } else if (ww < 1028 && !self.isMobile) {
+                self.isMobile = true;
+                self.$element.addClass("bm-attach");
+            }
+        },
+        
         init: function () {
             var self = this;
             
             self.$element = $("nav.main-nav");
             
-            self.desktopMode();
+            self.menuSkin();
             self.goSection();
             self.currentSection();
+            
+            self.pipe(window.innerWidth);
+            $(window).on("resize", function () {
+                self.pipe(this.innerWidth);
+            });
         }
+    };
+    
+    /*
+     * Funcion para crear un scroll horizonral segun en ancho total del contenido
+     */
+    $g.methos.scroollX = function () {
+        var Elems = $("[scroll]");
+        
+        function core(elem) {
+            var saveContent = elem.html(),
+                getMaxWidthWrap = elem.attr("max-width"),
+                scrollWrap,
+                getWidthParent,
+                getWidthChild;
+            
+            getMaxWidthWrap = +getMaxWidthWrap > 0 || !isNaN(+getMaxWidthWrap) ? +getMaxWidthWrap : 5000;
+            
+            elem.html("<div class='scroll-wrap'>" + saveContent + "</div>");
+            scrollWrap = elem.find(".scroll-wrap");
+            scrollWrap.css("width", getMaxWidthWrap);
+            
+            getWidthParent = elem.width();
+            getWidthChild = elem.find(".scroll-wrap").children().eq(0).outerWidth() + 20;
+            scrollWrap.css("width", getWidthChild + "px");
+            
+            if (getWidthParent < getWidthChild) {
+                elem.css({ overflowX: "auto" });
+            }
+        }
+        
+        Elems.each(function (i, elem) {
+            core($(this));
+        });
+    };
+    
+    /*
+     * Transferir o mover elementos a otros lugares del DOM
+     */
+    $g.methos.transfer_ = function () {
+        var Elems = $("[transfer]"),
+            data = [];
+        
+        Elems.each(function (i, elem) {
+            var splitActions = $(this).attr("transfer").split(":"),
+                getAction = splitActions[0],
+                getInstance = splitActions[1],
+                instanceExist = false;
+            
+            if (data.length) {
+                data.forEach(function (value) {
+                    if (value.name === getInstance) {
+                        value[getAction] = $(elem);
+                        instanceExist = true;
+                    }
+                });
+            }
+            
+            if (!instanceExist) {
+                let attachData = {};
+                attachData.name = getInstance;
+                attachData[getAction] = $(this);
+                data.push(attachData);
+            }
+        });
+        
+        // Run Transfer
+        data.forEach(function (value) {
+            if (value.to && value.resive) {
+                let getContentTo = value.to.html();
+                value.resive.html(getContentTo);
+            }
+        });
+    };
+    $g.methos.transfer = function () {
+        $("[transfer]").each(function (i, elem) {
+            var getQuery = $(this).attr("transfer"),
+                ElemResive = $(getQuery);
+            
+            if (ElemResive.length) {
+                ElemResive.html($(elem).html());
+            }
+        });
     };
     
     /*
@@ -324,5 +425,11 @@ var $g, window, document;
     $g.methos.suitSection();
     $g.methos.nav.init();
     $g.methos.particles.Run();
+    $g.methos.scroollX();
+    $g.methos.transfer();
     setTimeout($g.methos.fitFontSize, 100);
+    
+    $(function () {
+        $("a[href*='https://www.hostinger.com']").remove();
+    });
 })();

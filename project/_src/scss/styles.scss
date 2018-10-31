@@ -23,3 +23,5 @@ hr {
 
 /* Width cols */
 @include widths();
+
+@include resp();

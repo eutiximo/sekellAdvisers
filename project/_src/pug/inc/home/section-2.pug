@@ -1,26 +1,27 @@
 section.sec#sec2.vline
     div.content.mx-x3
         div.row
-            div.col-12.col-md-5.col-lg-6
+            div.col-12.col-sm-6.col-md-5.col-lg-6
                 img(src="media/images/tower.png").w-11.w-sm-9.w-lg-7
                 
-                div.phrase-1.w-11.w-md-9.mx-auto(fit-fz)
-                    div.fw300 We give you
-                    div.fw600.text-silver all the expertise you need
-                    div.fw600.text-silver to succeed and grow.
+                div.phrase-1.w-11.w-lg-9.mx-auto(fit-fz)
+                    div.fw300=i18n["home.sec2.text1.label1"].en_US
+                    div.fw600.text-silver=i18n["home.sec2.text1.label2"].en_US
+                    div.fw600.text-silver=i18n["home.sec2.text1.label3"].en_US
+                br
                     
-            div.col-12.col-md-7.col-lg-6
+            div.col-12.col-sm-6.col-md-7.col-lg-6
                 div.d-block.mx-auto.w-11.w-lg-9
-                    p.h3.text-center.text-uppercase Your first and <span class="fw-bold">best</span> link to the Mexican market.
+                    p.h3.text-center.text-uppercase #{i18n["home.sec2.title1.label1"].en_US} <span class="fw-bold">#{i18n["home.sec2.title1.label2"].en_US}</span> #{i18n["home.sec2.title1.label3"].en_US}
                     br
                     br
                     
-                    p.text-justify We can help you grow your business in Mexico, North America’s most dynamic emerging economy.
+                    p.text-justify=i18n["home.sec2.text2.label1"].en_US
                     
                 hr.set1
                 
                 div.d-block.mx-auto.w-11.w-lg-9
-                    p.text-justify We support U.S. and Canadian companies’ market entry into Mexico with dedicated, <b>on-the-ground experts.</b> We’re your secret weapon to overcome obstacles and cultural barriers. We have the expertise and personal touch you need to penetrate and expand in the Mexican market.
+                    p.text-justify #{i18n["home.sec2.text3.label1"].en_US} <b>#{i18n["home.sec2.text3.label2"].en_US}</b> #{i18n["home.sec2.text3.label3"].en_US}
                     br
                     
-                    p.text-center As your single point of contact in Mexico, and we coordinate all details and services on your behalf. 
+                    p.text-center=i18n["home.sec2.text4.label1"].en_US

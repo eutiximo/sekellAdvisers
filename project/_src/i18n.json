@@ -1,0 +1,760 @@
+{
+    "navbar.textlink.label1": {
+        "en_US": "Home",
+        "es_MX": "Inicio"
+    },
+    "navbar.textlink.label2": {
+        "en_US": "What&nbsp;we&nbsp;do",
+        "es_MX": ""
+    },
+    "navbar.textlink.label3": {
+        "en_US": "Why&nbsp;us",
+        "es_MX": ""
+    },
+    "navbar.textlink.label4": {
+        "en_US": "Why&nbsp;Mexico",
+        "es_MX": ""
+    },
+
+
+    "home.sec1.roleBusiness.label1": {
+        "en_US": "Business",
+        "es_MX": ""
+    },
+    "home.sec1.roleBusiness.label2": {
+        "en_US": "Strategy",
+        "es_MX": ""
+    },
+    "home.sec1.address.label1": {
+        "en_US": "Varsovia 36 Colonia",
+        "es_MX": ""
+    },
+    "home.sec1.address.label2": {
+        "en_US": "Juarez, Mexico City",
+        "es_MX": ""
+    },
+    "home.sec1.contact.label1": {
+        "en_US": "info@sekell.com",
+        "es_MX": ""
+    },
+    "home.sec1.contact.label2": {
+        "en_US": "+52 (55) 7100 0253",
+        "es_MX": ""
+    },
+
+
+    "home.sec2.text1.label1": {
+        "en_US": "We give you",
+        "es_MX": ""
+    },
+    "home.sec2.text1.label2": {
+        "en_US": "all the expertise you need",
+        "es_MX": ""
+    },
+    "home.sec2.text1.label3": {
+        "en_US": "to succeed and grow.",
+        "es_MX": ""
+    },
+    "home.sec2.title1.label1": {
+        "en_US": "Your first and",
+        "es_MX": ""
+    },
+    "home.sec2.title1.label2": {
+        "en_US": "best",
+        "es_MX": ""
+    },
+    "home.sec2.title1.label3": {
+        "en_US": "link to the Mexican market.",
+        "es_MX": ""
+    },
+    "home.sec2.text2.label1": {
+        "en_US": "We can help you grow your business in Mexico, North America’s most dynamic emerging economy.",
+        "es_MX": ""
+    },
+    "home.sec2.text3.label1": {
+        "en_US": "We support U.S. and Canadian companies’ market entry into Mexico with dedicated,",
+        "es_MX": ""
+    },
+    "home.sec2.text3.label2": {
+        "en_US": "on-the-ground experts.",
+        "es_MX": ""
+    },
+    "home.sec2.text3.label3": {
+        "en_US": "We’re your secret weapon to overcome obstacles and cultural barriers. We have the expertise and personal touch you need to penetrate and expand in the Mexican market.",
+        "es_MX": ""
+    },
+    "home.sec2.text4.label1": {
+        "en_US": "As your single point of contact in Mexico, and we coordinate all details and services on your behalf.",
+        "es_MX": ""
+    },
+
+
+    "home.sec3.text1.label1": {
+        "en_US": "In addition, we offer dedicated,",
+        "es_MX": ""
+    },
+    "home.sec3.text1.label2": {
+        "en_US": "SPANISH-SPEAKING BUSINESS AGENTS",
+        "es_MX": ""
+    },
+    "home.sec3.text1.label3": {
+        "en_US": "to be",
+        "es_MX": ""
+    },
+    "home.sec3.text1.label4": {
+        "en_US": "YOUR REPRESENTATIVE",
+        "es_MX": ""
+    },
+    "home.sec3.text1.label5": {
+        "en_US": "on the ground. Our agents:",
+        "es_MX": ""
+    },
+    "home.sec3.title1.label1": {
+        "en_US": "Our",
+        "es_MX": ""
+    },
+    "home.sec3.title1.label2": {
+        "en_US": "Services",
+        "es_MX": ""
+    },
+    "home.sec3.text2.label1": {
+        "en_US": "We offer",
+        "es_MX": ""
+    },
+    "home.sec3.text2.label2": {
+        "en_US": "a full array",
+        "es_MX": ""
+    },
+    "home.sec3.text2.label3": {
+        "en_US": "of business development and marketing services, including:",
+        "es_MX": ""
+    },
+    "home.sec3.list1.label1": {
+        "en_US": "In-country office space and contact information",
+        "es_MX": ""
+    },
+    "home.sec3.list1.label2": {
+        "en_US": "Translation of marketing material and websites",
+        "es_MX": ""
+    },
+    "home.sec3.list1.label3": {
+        "en_US": "Identifying and vetting distributors, brokers, and legal representation",
+        "es_MX": ""
+    },
+    "home.sec3.list1.label4": {
+        "en_US": "Assistance taking advantage of government grants and financing options for exporting",
+        "es_MX": ""
+    },
+    "home.sec3.list1.label5": {
+        "en_US": "Logistics for in-country business travel",
+        "es_MX": ""
+    },
+
+
+    "home.sec4.list1.label1": {
+        "en_US": "Are familiar with regional economic conditions and business conventions, and have existiong relationships with Mexican businesses and service providers",
+        "es_MX": ""
+    },
+    "home.sec4.list1.label2": {
+        "en_US": "Have full, in-depth knowledge of your business and products",
+        "es_MX": ""
+    },
+    "home.sec4.list1.label3": {
+        "en_US": "Generate and follow up on leads with in-person visits",
+        "es_MX": ""
+    },
+    "home.sec4.list1.label4": {
+        "en_US": "Research business opportunities, liaise with customers, and coordinate with vendors",
+        "es_MX": ""
+    },
+    "home.sec4.list1.label5": {
+        "en_US": "Represent you at trade show and during site visits to customers and distributors",
+        "es_MX": ""
+    },
+    "home.sec4.list1.label6": {
+        "en_US": "Use a goal-setting and reporting protocol to assure accountability",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label1": {
+        "en_US": "WE TAILOR OUR BUSINESS DEVELOPMENT PLAN TO CLIENTS'",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label2": {
+        "en_US": "product, needs, and budget. Our approach is",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label3": {
+        "en_US": "customizable,",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label4": {
+        "en_US": "pragmatic,",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label5": {
+        "en_US": "success-oriented,",
+        "es_MX": ""
+    },
+    "home.sec4.text1.label6": {
+        "en_US": "focusing on our clients' sales an maketing goals.",
+        "es_MX": ""
+    },
+
+
+    "home.sec5.title1.label1": {
+        "en_US": "Why business",
+        "es_MX": ""
+    },
+    "home.sec5.title1.label2": {
+        "en_US": "representation?",
+        "es_MX": ""
+    },
+    "home.sec5.text1.label1": {
+        "en_US": "U.S and Canadian cmpanies ofter face unique",
+        "es_MX": ""
+    },
+    "home.sec5.text1.label2": {
+        "en_US": "challenges doing business in Mexico",
+        "es_MX": ""
+    },
+    "home.sec5.list1.label1": {
+        "en_US": "Mexico's business culture is incredibly distinct, and can be hard to negative",
+        "es_MX": ""
+    },
+    "home.sec5.list1.label2": {
+        "en_US": "For those who are unfamiliar with it",
+        "es_MX": ""
+    },
+    "home.sec5.list1.label3": {
+        "en_US": "Distance and language are frequently barriers to following up on leads and contacts",
+        "es_MX": ""
+    },
+    "home.sec5.list1.label4": {
+        "en_US": "Different cultural communication norms can lead to confusion and misunderstanding",
+        "es_MX": ""
+    },
+    "home.sec5.list1.label5": {
+        "en_US": "Many companies face hurdles fanancing their expansion",
+        "es_MX": ""
+    },
+    "home.sec5.text2.label1": {
+        "en_US": "Sekell Advisers has clients in number of different industries - including healthcare, green tech, and automotive - negative those hurdles.",
+        "es_MX": ""
+    },
+    "home.sec5.text3.label1": {
+        "en_US": "We give yout company a visible,",
+        "es_MX": ""
+    },
+    "home.sec5.text3.label2": {
+        "en_US": "credible in-contry presence.",
+        "es_MX": ""
+    },
+    "home.sec5.text4.label1": {
+        "en_US": "We're your first and best link to the mexican market.",
+        "es_MX": ""
+    },
+
+
+    "home.sec6.title1.label1": {
+        "en_US": "WHY",
+        "es_MX": ""
+    },
+    "home.sec6.title1.label2": {
+        "en_US": "MEXICO?",
+        "es_MX": ""
+    },
+    "home.sec6.text1.label1": {
+        "en_US": "Mexico is quickly becoming an",
+        "es_MX": ""
+    },
+    "home.sec6.text1.label2": {
+        "en_US": "emerging market",
+        "es_MX": ""
+    },
+    "home.sec6.text1.label3": {
+        "en_US": "heavyweight.",
+        "es_MX": ""
+    },
+    "home.sec6.title2.label1": {
+        "en_US": "Mexico will be the world's 7th largest economy in 2050",
+        "es_MX": ""
+    },
+    "home.sec6.table1.year": {
+        "en_US": "2016",
+        "es_MX": ""
+    },
+    "home.sec6.table1.th1": {
+        "en_US": "Position",
+        "es_MX": ""
+    },
+    "home.sec6.table1.th2": {
+        "en_US": "Country",
+        "es_MX": ""
+    },
+    "home.sec6.table1.th3": {
+        "en_US": "CDP at PPA",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country1": {
+        "en_US": "China",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country2": {
+        "en_US": "United States",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country3": {
+        "en_US": "India",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country4": {
+        "en_US": "Japan",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country5": {
+        "en_US": "Germary",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country6": {
+        "en_US": "Russia",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country7": {
+        "en_US": "Brazil",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country8": {
+        "en_US": "Indonesia",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country9": {
+        "en_US": "United Kingdom",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country10": {
+        "en_US": "France",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country11": {
+        "en_US": "Mexico",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country12": {
+        "en_US": "Italy",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country13": {
+        "en_US": "South Korea",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country14": {
+        "en_US": "Turkey",
+        "es_MX": ""
+    },
+    "home.sec6.table1.country15": {
+        "en_US": "Saudi Arabia",
+        "es_MX": ""
+    },
+
+
+    "home.sec6.table2.year": {
+        "en_US": "2050",
+        "es_MX": ""
+    },
+    "home.sec6.table2.th1": {
+        "en_US": "Position",
+        "es_MX": ""
+    },
+    "home.sec6.table2.th2": {
+        "en_US": "Country",
+        "es_MX": ""
+    },
+    "home.sec6.table2.th3": {
+        "en_US": "CDP at PPA",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country1": {
+        "en_US": "China",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country2": {
+        "en_US": "India",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country3": {
+        "en_US": "United States",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country4": {
+        "en_US": "Indonesia",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country5": {
+        "en_US": "Brazil",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country6": {
+        "en_US": "Russia",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country7": {
+        "en_US": "Mexico",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country8": {
+        "en_US": "Japan",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country9": {
+        "en_US": "Germany",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country10": {
+        "en_US": "United Kingdom",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country11": {
+        "en_US": "Turkey",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country12": {
+        "en_US": "France",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country13": {
+        "en_US": "Saudi Arabia",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country14": {
+        "en_US": "Nigeria",
+        "es_MX": ""
+    },
+    "home.sec6.table2.country15": {
+        "en_US": "Egypt",
+        "es_MX": ""
+    },
+
+
+    "home.sec7.title1.label1": {
+        "en_US": "Platform for importing and exporting",
+        "es_MX": ""
+    },
+    "home.sec7.text1.label1": {
+        "en_US": "Free trade agreements with 46 countries",
+        "es_MX": ""
+    },
+    "home.sec7.text1.label2": {
+        "en_US": "6 economic cpmplmentarity agreements",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label1": {
+        "en_US": "1994 Nafta",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label2": {
+        "en_US": "1995 Comlobia",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label3": {
+        "en_US": "1999 Chile",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label4": {
+        "en_US": "2000 Israel",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label5": {
+        "en_US": "2000 European Union",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label6": {
+        "en_US": "2001 Iceland, Liechtenstein, Norway, Switzerland",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label7": {
+        "en_US": "2004 Uruguay",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label8": {
+        "en_US": "2005 Japan",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label9": {
+        "en_US": "2012 Peru",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label10": {
+        "en_US": "2013 Central America",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label11": {
+        "en_US": "2015 Panama",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label12": {
+        "en_US": "2016 Pacific Alliance",
+        "es_MX": ""
+    },
+    "home.sec7.bullet1.label13": {
+        "en_US": "2018 TPP",
+        "es_MX": ""
+    },
+
+
+    "home.sec8.title1.label1": {
+        "en_US": "A technologically",
+        "es_MX": ""
+    },
+    "home.sec8.title1.label2": {
+        "en_US": "sophisticated ecnonomy",
+        "es_MX": ""
+    },
+    "home.sec8.text1.label1": {
+        "en_US": "Exports of",
+        "es_MX": ""
+    },
+    "home.sec8.text1.label2": {
+        "en_US": "medium and high technology",
+        "es_MX": ""
+    },
+    "home.sec8.text1.label3": {
+        "en_US": "manufactures as a percetange of GDPt",
+        "es_MX": ""
+    },
+
+
+    "home.sec9.title1.label1": {
+        "en_US": "Among the",
+        "es_MX": ""
+    },
+    "home.sec9.title1.label2": {
+        "en_US": "most attractive worldwide destination for investment",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country1": {
+        "en_US": "Angola",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country2": {
+        "en_US": "Spain",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country3": {
+        "en_US": "Swenden",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country4": {
+        "en_US": "Ireland",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country5": {
+        "en_US": "Mexico",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country5.info": {
+        "en_US": "Top countries receiving foreign direct investment, 2016",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country6": {
+        "en_US": "Luxemburg",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country7": {
+        "en_US": "France",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country8": {
+        "en_US": "Italy",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country9": {
+        "en_US": "Belgium",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country10": {
+        "en_US": "Canada",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country11": {
+        "en_US": "Russia",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country12": {
+        "en_US": "India",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country13": {
+        "en_US": "Cayman Islands",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country14": {
+        "en_US": "Australia",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country15": {
+        "en_US": "Brazil",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country16": {
+        "en_US": "British Virgin Islands",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country17": {
+        "en_US": "Singapore",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country18": {
+        "en_US": "Netherlands",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country19": {
+        "en_US": "Hong Kong",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country20": {
+        "en_US": "China",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country21": {
+        "en_US": "United Kingdom",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country22": {
+        "en_US": "United States",
+        "es_MX": ""
+    },
+    "home.sec9.graph1.country23": {
+        "en_US": "Worldwide total",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country1": {
+        "en_US": "United Arab Emirates",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country2": {
+        "en_US": "South Korea",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country3": {
+        "en_US": "Mexico",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country3.info": {
+        "en_US": "Most attrative destinations for foregin direct investment, 2018",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country4": {
+        "en_US": "Hong Kong",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country5": {
+        "en_US": "Australia",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country6": {
+        "en_US": "Russia",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country7": {
+        "en_US": "Canada",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country8": {
+        "en_US": "Brazil",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country9": {
+        "en_US": "France",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country10": {
+        "en_US": "Japan",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country11": {
+        "en_US": "India",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country12": {
+        "en_US": "United Kingdom",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country13": {
+        "en_US": "Germany",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country14": {
+        "en_US": "China",
+        "es_MX": ""
+    },
+    "home.sec9.graph2.country15": {
+        "en_US": "United States",
+        "es_MX": ""
+    },
+
+
+    "home.sec10.title1.label1": {
+        "en_US": "A constantry",
+        "es_MX": ""
+    },
+    "home.sec10.title1.label2": {
+        "en_US": "Modernizing country",
+        "es_MX": ""
+    },
+    "home.sec10.text1.label1": {
+        "en_US": "13 reforms in action",
+        "es_MX": ""
+    },
+    "home.sec10.reform1": {
+        "en_US": "Energy",
+        "es_MX": ""
+    },
+    "home.sec10.reform2": {
+        "en_US": "Telecommunications",
+        "es_MX": ""
+    },
+    "home.sec10.reform3": {
+        "en_US": "Finance",
+        "es_MX": ""
+    },
+    "home.sec10.reform4": {
+        "en_US": "Economic competition",
+        "es_MX": ""
+    },
+    "home.sec10.reform5": {
+        "en_US": "Political/electoral",
+        "es_MX": ""
+    },
+    "home.sec10.reform6": {
+        "en_US": "Education",
+        "es_MX": ""
+    },
+    "home.sec10.reform7": {
+        "en_US": "Treasury",
+        "es_MX": ""
+    },
+    "home.sec10.reform8": {
+        "en_US": "Labor",
+        "es_MX": ""
+    },
+    "home.sec10.reform9": {
+        "en_US": "Financial reform in local governments",
+        "es_MX": ""
+    },
+    "home.sec10.reform10": {
+        "en_US": "Anti-corruption reform",
+        "es_MX": ""
+    },
+    "home.sec10.reform11": {
+        "en_US": "Transparency",
+        "es_MX": ""
+    },
+    "home.sec10.reform12": {
+        "en_US": "Constitutional reform",
+        "es_MX": ""
+    },
+    "home.sec10.reform13": {
+        "en_US": "Constitutional reform",
+        "es_MX": ""
+    }
+}
